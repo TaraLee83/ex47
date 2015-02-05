@@ -1,0 +1,5 @@
+#!/usr/bin/python
+
+
+def dearworld(self):  
+  print("Dear world, this works.")
