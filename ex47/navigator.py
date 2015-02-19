@@ -1,33 +1,29 @@
-user = raw_input("> ")    
-    
-def go(self, current_space, user):
+#Receive direction key, access value within formula, decide if move is possible. If so- move, if not- say so.
+from graph import graph
 
+user = ["go to sleep north to run east away"]
+
+directions = {'north': -6, 'east': 1, 
+	      'south': 6, 'west': -1
+	     }		    
+actions = {'sleep': +3, 'open bag': 0, 
+	   'sing': +1
+	  }
+directory = {0: directions, 1: actions}
+
+
+def test_move(self, token, current_space):
+    print token
+    print current_space
+    step = directions[token]
+    print step
+    if step in graph[current_space]:
+        print "success"
     else:
         print "You can't go this way."
-        
-  	      
 
-directions = {'north': -6, 
-	      'east': +1, 
-	      'south': +6, 
-	      'west': -1
-	     }
-current_space = 0
-
-test = go(directions, current_space, user)
-
-
-find words in incoming string. Invoke def based on 
-
-
-
-      
-    def move(self, current_space):
-        print current_space
-               
-        user = raw_input("> ")
-        print Engine.directions.get('north')
-        
-        match = next(val for key, val in Engine.directions.items() if user in key)
-        
-        self.go(current_space, user)
+    
+current_space = 12    
+token = 'north'
+go = test_move('stuff', token, current_space)
+	       

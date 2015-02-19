@@ -23,15 +23,30 @@ class Engine(object):
         self.incoming(current_space)
         
     def incoming(self, current_space):
-        user = raw_input("direction?>  ")
-        
-        for key in directory:
-            for subkey in directory[key]:
-                if subkey in user:
-                    if subkey in directions:
-                        print "yay"
-                    elif subkey in actions:
-                        print "woohoo!"
+        print "at incoming"
+        user = raw_input(["direction?>  "])
+        print user
+    
+           
+           
+user = ["go to sleep north run away"]
+
+directions = ('north', 'east', 
+	      'south', 'west'
+	     )		    
+actions = {'sleep': +3, 'open bag': 0, 
+	   'sing': +1
+	  }
+directory = (directions, actions)
+
+
+
+for item in directory:
+    print item
+
+i = iter(directions)
+item = i.next()
+print item
            
                 
 	    	  
@@ -138,3 +153,7 @@ go.scene(current_space)
         else:
   	    print "not working.
   	"""
+  	
+  	        #U = iter(user)
+        #V = U.next()
+        #print V
