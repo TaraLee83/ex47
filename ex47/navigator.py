@@ -1,5 +1,6 @@
 #Receive direction key, access value within formula, decide if move is possible. If so- move, if not- say so.
 from graph import graph
+from tile_desc import scene
 
 user = ["go to sleep north to run east away"]
 

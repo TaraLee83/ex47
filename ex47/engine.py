@@ -2,8 +2,6 @@ from tile_desc import scene
 from graph import graph
 from encounters import encounter
 
-user = ["go to sleep north run away"]
-
 directions = {'north': -6, 'east': 1, 
 	      'south': 6, 'west': -1
 	     }		    
@@ -23,14 +21,38 @@ class Engine(object):
         
     def encounter(self, current_space):
         print "at encounter"
-        self.incoming(current_space)
+        self.waldo(current_space)
         
-    def incoming(self, current_space):
-        print "at incoming"
-        user = raw_input(["direction?>  "])
-        print user
-    
-
+    def pass_in(self, current_space):
+        user = None
+        self.waldo(current_space)
+        
+    def waldo(self, current_space):
+        user = raw_input(">  ")
+        for key in directory:
+            for subkey in directory[key]:
+	        if subkey in user:
+		    self.point(subkey, current_space)
+	            
+		    
+    def point(self, subkey, current_space):
+        if subkey in directions:
+	    self.test_move(self, subkey, current_space)
+	elif subkey in actions:
+	    self.actions(self, subkey, current_space)
+		 
+    def test_move(self, subkey, current_space):
+        step = directions[subkey]
+        possible = step + current_space
+        if possible in graph[current_space]:
+            current_space = possible
+            self.scene(self, current_space)
+        else:
+            print "You can't go this way."
+            self.scene(self, current_space)
+            
+    def actions(self, subkey, current_space):
+        pass
 
 
 

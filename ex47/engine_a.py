@@ -1,4 +1,5 @@
 from tile_desc import scene
+from interpret import present, point
 
 user = ["go to north run away"]
 
@@ -28,28 +29,9 @@ class Engine(object):
     def incoming(self, current_space):
         print "at incoming"
         self.present(current_space)
-        
-    def present(self, current_space):
-        print "at present"
-        x = str(user)
-        for keys in directory:
-            for subkeys in directory[keys]:
-                token = subkeys
-                
-        waldo = x.find(token)
-        if waldo == -1:
-            self.present(current_space)
-        if waldo >= 0:
-            self.point(token, current_space)
 
-    def point(self, token, current_space):
+    def point(self, current_space):
         print "at point"
-        if token in directions:
-            self.test_move(token, current_space)
-        if token in actions:
-            self.action(token, current_space)
-        else:  
-            print "system failure"
             
     def test_move(self, token, current_space):
         step = directions[token]
