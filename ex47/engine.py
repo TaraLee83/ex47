@@ -12,7 +12,7 @@ directory = {0: directions, 1: actions}
 
 class Engine(object):
     
-    def __init__(self, current_space):
+    def __init__(self, current_space):																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
         self.current_space = current_space
         
     def scene(self, current_space):
@@ -27,29 +27,34 @@ class Engine(object):
         user = None
         self.waldo(current_space)
         
-    def waldo(self, current_space):
+    def waldo(self, current_space):																																																																																																																																																																																																																																																							
         user = raw_input(">  ")
+        good_value = 0
         for key in directory:
             for subkey in directory[key]:
 	        if subkey in user:
+		    good_value = 0
 		    self.point(subkey, current_space)
-	            
+	
+	if good_value == 0:
+	    print "I'm afraid I didn't understand your command. Please try again."
+	    self.waldo(current_space)
 		    
     def point(self, subkey, current_space):
         if subkey in directions:
-	    self.test_move(self, subkey, current_space)
+	    self.test_move(subkey, current_space)
 	elif subkey in actions:
-	    self.actions(self, subkey, current_space)
+	    self.actions(subkey, current_space)
 		 
     def test_move(self, subkey, current_space):
         step = directions[subkey]
         possible = step + current_space
         if possible in graph[current_space]:
             current_space = possible
-            self.scene(self, current_space)
+            self.scene(current_space)
         else:
             print "You can't go this way."
-            self.scene(self, current_space)
+            self.scene(current_space)
             
     def actions(self, subkey, current_space):
         pass
