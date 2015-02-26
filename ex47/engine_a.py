@@ -33,8 +33,8 @@ class Engine(object):
     def point(self, current_space):
         print "at point"
             
-    def test_move(self, token, current_space):
-        step = directions[token]
+    def test_move(self, subkey, current_space):
+        step = directions[subkey]
         possible = step + current_space
         if possible in graph[current_space]:
             current_space = possible

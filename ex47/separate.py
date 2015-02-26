@@ -1,40 +1,3 @@
-"""1 2 3 4  5 6
-7 8 9 10 11 12
-13 14 15 16 17 18
-19 20 21 22 23 24
-25 26 27 28 29 30
-31 32 33 34 35 36
-"""
-        for subkeys in x:
-            waldo = x.find(subkeys)
-"""initialize starting place with class instantiation. Desc prints. Encounter happens or doesn't. Blank prompt appears. At any time bag may be accessed. 
-   Health data is stored and may be accessed at any time through prompt."""
-
-        
-"""   for i in user:
-	    if i in Engine.directions:
-	        print i
-                direction = directions[user]
-                print direction
-            elif user in Engine.actions:
-                self.do(current_space, user)
-	    else:
-	        print "Your health is too low to move, you must rest.
-	        
-	        and ((current_space - 6) >= 0)
-	        
-	                direction = Engine.directions[user]
-
-  	
-  	        #U = iter(user)
-#V = U.next()
-
-
-    if token in directions:
-        go = direction('stuff', token, current_space)
-    if token in actions:
-        go = action('stuff', token, current_space)"""
-        
 user = ["go to north run away"]
 
 directions = {'north': -6, 'east': 1, 
@@ -99,4 +62,4 @@ def test_move(self, token, current_space):
 token = 0	    
 current_space = 5
 
-go = scene('stuff', current_space)        
+go = scene('stuff', current_space)    

@@ -1,8 +1,20 @@
 #encounter dictionaries
+import random
+
+def roll(self):
+    x = random.randint(1, 5) 
+    y = 4
+    if x == y:
+        print x
+        print "encounter happens"
+    else:
+        print x,"no"
+        
 
 
-def encounter(self):
-    print "possible encounter here."
+encounter = {}
+
+go = encounter('stuff')
     
     
 Meadow = {

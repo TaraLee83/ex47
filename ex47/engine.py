@@ -64,7 +64,7 @@ class Engine(object):
 
 
 	    
-current_space = 5
+current_space = 34
 
 go = Engine(current_space)
 go.scene(current_space)
