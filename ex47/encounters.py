@@ -1,42 +1,40 @@
-#encounter dictionaries
-import random
+#encounter functionality practice space
 
-def roll(self):
+import random
+from graph import encounter
+
+direction = {'north': -6, 'east': 1, 
+	      'south': 6, 'west': -1
+	     }		    
+action = {'sleep': +3, 'open bag': 0, 
+	   'sing': +1
+	  }
+directory = {0: direction, 1: action, 2:encounter}
+
+def roll(self, current_space):
     x = random.randint(1, 5) 
     y = 4
     if x == y:
-        print x
-        print "encounter happens"
+        go = referee('stuff', current_space)
     else:
         print x,"no"
         
+def referee(self, current_space):
+    x = encounter[current_space]
+    if 'Dragonlands' in x:
+        go = dragonlands('stuff', current_space)
+    elif 'Meadow' in x:
+        pass
+    elif 'Desert' in x:
+        pass
+    elif 'Forest' in x:
+        pass
 
-
-encounter = {}
-
-go = encounter('stuff')
     
+def dragonlands(self, current_space):
+    print "at dragonlands"
+ 
+        
+current_space = 10
+go = referee('stuff', current_space)
     
-Meadow = {
-	 }
-
-Dragonlands = {'red': ['4', '5', '6', '10', '11', '12', '16', '17', '18'],
-	       'green': ['4', '5', '6', '10', '11', '12', '16', '17', '18'],
-	       'gold': ['4', '5', '6', '10', '11', '12', '16', '17', '18'],
-               'his_tears': ['16', '10']
-	      }
-
-Desert = {
-         }
-
-Forest = {
-	 }
-
-charms = {'godswear': ['red', 'green', 'gold']
-         }
-
-attacks = {'red': ['fire_breath', 'claws', 'tail_swipe', 'finisher'],
-           'green': ['fire_breath', 'claws', 'tail_swipe', 'finisher'],
-           'gold': ['fire_breath', 'claws', 'tail_swipe', 'finisher'],
-           'his_tears': ['drown', 'sorrow']
-          }
