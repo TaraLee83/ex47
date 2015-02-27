@@ -38,42 +38,102 @@ graph = {1: [2, 7],
          36: [35]
          }
 
-tile_loc = {1: Meadow,
-            2: Meadow,
-	    3: Meadow,
-            4: Dragonlands,
-            5: Dragonlands,
-            6: Dragonlands,
-            7: Meadow,
-            8: Meadow,
-            9: Meadow,
-            10: Dragonlands,
-            11: Dragonlands,
-            12: Dragonlands,
-            13: Meadow,
-            14: Meadow,
-            15: Meadow,
-            16: Dragonlands,
-            17: Dragonlands,
-            18: Dragonlands,
-            19: Desert,
-            20: Desert,
-            21: Desert,
-            22: Forest,
-            23: Forest,
-            24: Forest,
-            25: Desert,
-            26: Desert,
-            27: Desert,
-            28: Forest,
-            29: Forest,
-            30: Forest,
-            31: Desert,
-            32: Desert,
-            33: Desert,
-            34: Forest,
-            35: Forest,
-            36: Forest
-            }
+Meadow = {}
+
+Desert = {
+         }
+
+Forest = {
+	 }
+
+charms = {'godswear': ['red', 'green', 'gold']
+         }
+
+attack = {'red': ['fire_breath', 'claws', 'tail_swipe', 'finisher'],
+          'green': ['fire_breath', 'claws', 'tail_swipe', 'finisher'],
+          'gold': ['fire_breath', 'claws', 'tail_swipe', 'finisher'],
+          'his_tears': ['drown', 'sorrow']
+          } 
+
+
+his_tears = 0
+
+
+encounter = {1: "temp",
+             2: "temp",
+	     3: "temp",
+             4: "temp",
+             5: "temp",
+             6: "temp",
+             7: "temp",
+             8: "temp",
+             9: "temp",
+             10: 'Dragonlands',
+             11: 'Dragonlands',
+             12: 'Dragonlands',
+             13: "temp",
+             14: "temp",
+             15: "temp",
+             16: "temp",
+             17: "temp",
+             18: "temp",
+             19: "temp",
+             20: "temp",
+             21: "temp",
+             22: "temp",
+             23: "temp",
+             24: "temp",
+             25: "temp",
+             26: "temp",
+             27: "temp",
+             28: "temp",
+             29: "temp",
+             30: "temp",
+             31: "temp",
+             32: "temp",
+             33: "temp",
+             34: "temp",
+             35: "temp",
+             36: "temp"
+           }
+
+#tile_loc = {1: Meadow,
+#            2: Meadow,
+#	    3: Meadow,
+#            4: Dragonlands,
+#            5: Dragonlands,
+#            6: Dragonlands,
+#            7: Meadow,
+#            8: Meadow,
+#            9: Meadow,
+#            10: Dragonlands,
+#            11: Dragonlands,
+#            12: Dragonlands,
+#            13: Meadow,
+#            14: Meadow,
+#            15: Meadow,
+#            16: Dragonlands,
+#            17: Dragonlands,
+#            18: Dragonlands,
+#            19: Desert,
+#            20: Desert,
+#            21: Desert,
+#            22: Forest,
+#            23: Forest,
+#            24: Forest,
+#            25: Desert,
+#            26: Desert,
+#            27: Desert,
+#            28: Forest,
+#            29: Forest,
+#            30: Forest,
+#            31: Desert,
+#            32: Desert,
+#            33: Desert,
+#            34: Forest,
+#            35: Forest,
+#            36: Forest
+#           }
  
  
+    
