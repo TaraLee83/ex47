@@ -2,13 +2,13 @@ from tile_desc import scene
 from graph import graph
 from encounters import encounter
 
-directions = {'north': -6, 'east': 1, 
+direction = {'north': -6, 'east': 1, 
 	      'south': 6, 'west': -1
 	     }		    
-actions = {'sleep': +3, 'open bag': 0, 
+action = {'sleep': +3, 'open bag': 0, 
 	   'sing': +1
 	  }
-directory = {0: directions, 1: actions}
+directory = {0: direction, 1: action, 2:encounter}
 
 class Engine(object):
     
@@ -41,13 +41,13 @@ class Engine(object):
 	    self.waldo(current_space)
 		    
     def point(self, subkey, current_space):
-        if subkey in directions:
+        if subkey in direction:
 	    self.test_move(subkey, current_space)
-	elif subkey in actions:
-	    self.actions(subkey, current_space)
+	elif subkey in action:
+	    self.action(subkey, current_space)
 		 
     def test_move(self, subkey, current_space):
-        step = directions[subkey]
+        step = direction[subkey]
         possible = step + current_space
         if possible in graph[current_space]:
             current_space = possible
