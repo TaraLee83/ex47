@@ -15,26 +15,48 @@ def roll(self, current_space):
     x = random.randint(1, 5) 
     y = 4
     if x == y:
-        go = referee('stuff', current_space)
+        go = map_encounter('stuff', current_space)
     else:
         print x,"no"
         
-def referee(self, current_space):
+def map_encounter(self, current_space):
     x = encounter[current_space]
     if 'Dragonlands' in x:
-        go = dragonlands('stuff', current_space)
+        go = dragon_chooser('stuff', current_space)
     elif 'Meadow' in x:
         pass
     elif 'Desert' in x:
         pass
     elif 'Forest' in x:
         pass
-
     
-def dragonlands(self, current_space):
-    print "at dragonlands"
- 
+def dragon_chooser(self, current_space):
+    dragon = random.randint(0, 2)
+    if dragon == 0:
+        red_dragon('stuff', current_space)
+    elif dragon == 1:
+        green_dragon('stuff', current_space)
+    elif dragon == 2:
+        gold_dragon('stuff', current_space)
+        
+def red_dragon(self, current_space):
+    attack = ("go", "stay", "inbetween")
+    print random.choice(attack)
+    if sum(hero_hitpoints.py 
+    
+    
+def green_dragon(self, current_space):
+    print "green_dragon"
+    attack = ("go", "stay", "inbetween")
+    print random.choice(attack)
+    
+def gold_dragon(self, current_space):
+    print "gold_dragon"
+    attack = ("go", "stay", "inbetween")
+    print random.choice(attack)
+    
+    
         
 current_space = 10
-go = referee('stuff', current_space)
+go = dragon_chooser('stuff', current_space)
     
