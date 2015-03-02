@@ -1,4 +1,4 @@
-#pull from attacks dict randomly, print desc of attack, use value to calculate hp loss. If hero dead end game, if hero lives pass.
+###pull from attacks dict randomly, print desc of attack, use value to calculate hp loss. If hero dead end game, if hero lives pass.
 from foe_hitpoints import RedDragon
 import random
 
@@ -13,36 +13,37 @@ Dragon2 = {15: "You don the fireopal encased in glass."}
 
 Charms = {0: [Dragon1, Dragon2]}
 
-Red = {-20: "Red claw attack",
-       -20: "Red tail_swipe",
-       -40: "Red fire_breath",
-       -50: "Red finisher",
+Red = {"Red claw attack": -20,
+       "Red tail_swipe": -20,
+       "Red fire_breath": -40,
+       "Red finisher": -50,
       }
-Green = {-16: "Green claw attack",
-	 -16: "Green tail_swipe",
-	 -32: "Green fire_breath",
-	 -40: "Green finisher",
+Green = {"Green claw attack": -16,
+	 "Green tail_swipe": -16,
+	 "Green fire_breath": -32,
+	 "Green finisher": -40,
         }
-Gold = {-14: "Gold claws",
-	-14: "Gold tail_swipe",
-        -28: "Gold fire_breath",
-	-35: "Gold finisher",
+Gold = {"Gold claws": -14,
+	"Gold tail_swipe": -14,
+        "Gold fire_breath": -28,
+        "Gold finisher": -35,
        }
 Dragons = {0: Red, 1: Green,
 	   2: Gold
 	  }
 
 def dragon_attack(self, current_space):
-    key = 0
     a = random.choice(Dragons.keys())
-    print a
+    x = random.randint(1, 2)
     b = random.choice(Dragons[a].keys())
-    print b
+    if x == 1:
+        print b
+    elif x != 0:
+        print "Luck favors you and the Dragons' rage misses you."
+        
+
     
  
-    
-     
-#randomly choose Dragon, lookup keys of Dragon dictionary, randomly choose key.
 
 
 def dragon_chooser(self, current_space):
