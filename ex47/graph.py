@@ -48,7 +48,11 @@ Forest = {
 
 charms = {'godswear': ['red', 'green', 'gold']
          }
-Red = {0: }
+Red = {-20: claws, "claws attack desc",
+       -20: tail_swipe, "tail_swipe desc",
+       -40: fire_breath, "fire_breath desc",
+       -50: finisher, "finisher desc"
+       }
 
 attack = {'red': ['fire_breath', 'claws', 'tail_swipe', 'finisher'],
           'green': ['fire_breath', 'claws', 'tail_swipe', 'finisher'],
