@@ -22,24 +22,20 @@ Dragons = [['Red', [-20, "Red claw attack"], [-20, "Red tail_swipe"],
            [-28, "Gold fire_breath"],[-35, "Gold finisher"]]
 	  ]
 
-a = random.choice(Dragons)
-print a
-b = random.choice(a[1:5])
-print b
-c = b[0:1] 
-print (", ".join(repr(e) for e in c))
-desc = b[1:2]
-print (", ".join(repr(e) for e in desc))
+
 
 def dragon_attack(self, current_space):
-    dict = Dragons
-    a = random.choice(Dragons.keys())
-    x = random.randint(1, 2)
-    b = random.choice(Dragons[a].items())
-    if x == 1:
-        go = damage(self, current_space, dict, a, b)		    
-    elif x != 0:
-        print "Luck favors you and the Dragons' rage misses you."
+    dragon_chooser = random.choice(Dragons)
+    group = random.choice(dragon_chooser[1:5])
+    pull_val = group[0:1] 
+    value = (", ".join(repr(e) for e in pull_val))
+    pull_desc = group[1:2]
+    desc = (", ".join(repr(e) for e in pull_desc))
+    roll = random.randint(0, 4)
+    if roll == 1:
+        print "You're lucky!"		    
+    elif roll != 1:
+        print desc
         
         
 def damage(self, current_space, dict, a, b):
@@ -76,4 +72,4 @@ def gold_dragon(self, current_space):
     
 
 current_space = 6    
-#Sgo = dragon_attack('stuff', current_space)    
+go = dragon_attack('stuff', current_space)    
