@@ -13,34 +13,35 @@ Dragon2 = {15: "You don the fireopal encased in glass."}
 
 Charms = {0: [Dragon1, Dragon2]}
 
-Red = {"Red claw attack": -20,
-       "Red tail_swipe": -20,
-       "Red fire_breath": -40,
-       "Red finisher": -50,
-      }
-Green = {"Green claw attack": -16,
-	 "Green tail_swipe": -16,
-	 "Green fire_breath": -32,
-	 "Green finisher": -40,
-        }
-Gold = {"Gold claws": -14,
-	"Gold tail_swipe": -14,
-        "Gold fire_breath": -28,
-        "Gold finisher": -35,
-       }
-Dragons = {0: Red, 1: Green,
-	   2: Gold
-	  }
+
+Dragons = [['Red', [-20, "Red claw attack"], [-20, "Red tail_swipe"],
+           [-40, "Red fire_breath"], [-50, "Red finisher"]],
+           ['Green', [-16, "Green claw attack"], [-16, "Green tail_swipe"],
+           [-32, "Green fire_breath"], [-40, "Green finisher"]],
+	   ['Gold', [-14, "Gold claws"], [-14, "Gold tail_swipe"],
+           [-28, "Gold fire_breath"],[-35, "Gold finisher"]]
+	  ]
+
+a = random.choice(Dragons)
+print a
+b = random.choice(a[1:5])
+print b
 
 def dragon_attack(self, current_space):
+    dict = Dragons
     a = random.choice(Dragons.keys())
     x = random.randint(1, 2)
-    b = random.choice(Dragons[a].keys())
+    b = random.choice(Dragons[a].items())
     if x == 1:
-        print b
+        go = damage(self, current_space, dict, a, b)		    
     elif x != 0:
         print "Luck favors you and the Dragons' rage misses you."
         
+        
+def damage(self, current_space, dict, a, b):
+    pass
+    
+    
 
     
  
@@ -71,4 +72,4 @@ def gold_dragon(self, current_space):
     
 
 current_space = 6    
-go = dragon_attack('stuff', current_space)    
+#Sgo = dragon_attack('stuff', current_space)    
