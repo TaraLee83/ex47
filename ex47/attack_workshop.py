@@ -26,6 +26,10 @@ a = random.choice(Dragons)
 print a
 b = random.choice(a[1:5])
 print b
+c = b[0:1] 
+print (", ".join(repr(e) for e in c))
+desc = b[1:2]
+print (", ".join(repr(e) for e in desc))
 
 def dragon_attack(self, current_space):
     dict = Dragons
