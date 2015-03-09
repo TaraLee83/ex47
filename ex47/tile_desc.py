@@ -1,15 +1,29 @@
 #Tile descriptions
 
-scene = {1: 'meadow desc',
+scene = {1: """meadow desc""",
          2: 'meadow desc',
          3: 'meadow desc',
-         4: 'dragonlands desc',
+         4: """The Western range of summits, passable, unlike
+	    it's Eastern echo, stretched from Southwest to 
+	    Northwest. It ended at the point between the Eastern and
+	    Western summits known as The Dragons Smile. The Smile:
+	    three crooked lines of jagged rock outcropping that
+	    the cruel and ceaseless winds had filed into spear-like
+	    points. If the warm blue sky brought hope to this place,
+	    The Smile tore it apart and consumed it with delight.
+	    """,
          5: 'dragonlands desc',
          6: 'dragonlands desc',
          7: 'meadow desc',
          8: 'meadow desc',
          9: 'meadow desc',
-         10: 'dragonlands desc',
+         10: """sun-browned, speckled with 
+	    common yellow and blue-bell wildflowers and alive
+	    at the thicket with birds hopping from one branch
+	    to another, snakes bending the tall dry grasses
+	    and the clicking, clacking, humming and buzzing
+	    of a host of insects and  
+	    """,
          11: 'dragonlands desc',
          12: 'dragonlands desc',
          13: 'meadow desc',
