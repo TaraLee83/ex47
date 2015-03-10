@@ -12,19 +12,53 @@ scene = {1: """meadow desc""",
 	    points. If the warm blue sky brought hope to this place,
 	    The Smile tore it apart and consumed it with delight.
 	    """,
-         5: 'dragonlands desc',
+         5: """The narrow lakeshore crouches between The Dragons
+	    Smile and Gold Pool. From this close you are able to
+	    see a dozen round openings in the three rows of jagged
+	    rock. The caves were crudley smashed into the rockface.
+	    Their entrances are all obscured by fires black.
+	        """,
          6: 'dragonlands desc',
          7: 'meadow desc',
          8: 'meadow desc',
          9: 'meadow desc',
-         10: """sun-browned, speckled with 
-	    common yellow and blue-bell wildflowers and alive
-	    at the thicket with birds hopping from one branch
-	    to another, snakes bending the tall dry grasses
-	    and the clicking, clacking, humming and buzzing
-	    of a host of insects and  
-	    """,
-         11: 'dragonlands desc',
+         10: """The Western summits flank your left. The wise and the 
+	     greedy both know to keep ones eyes trained on this sight.
+	     Sun browned, speckled with common yellow and blue-bell 
+	     wildflowers and alive at the thicket with birds that 
+	     shook leaf cluster as they hopped from one branch to 
+	     another. Snakes bent the tall dry grasses, toads
+	     and water fowl made wary gutterations as they worked to
+	     silence the clicking, clacking, humming and buzzing of a 
+	     host of insects around them. 
+	        To your right you hear the water of Histears breaking
+	     around the crystal columns that encase the bodies and souls
+	     suspended there. Including Harper. The strikes the crystals
+	     and within, light and energy depose each other with fervor,
+	     as all movement leads to creation so does that between the
+	     sun, the memory of the crystal, the malleability of the water
+	     and the minerals leached from the soil. Thick as syrup, 
+	     a wheaten gold, from beneath the clustered crystals flowed
+	     a liquid that as it traveled from the warm waters near the 
+	     sun drenched Western summits to the vast lake encircled by
+	     the point between the Eastern and Western Summits known
+	     as The Dragons Smile hardened into common gold.
+	     """,
+         11: """You stand upon the ice encrusted string of rocks that
+	     make an island of these crystal encased soul shards. The 
+	     brilliance and beauty threatens to overwhelm you. You wish
+	     all at once to weep, to fall to your knees in thanks to the 
+	     gods that so small a soul could, in life, relieve you eyes
+	     with such beauty, to scream at the impossiblity of life at
+	     the cruelty of existence to give humans such detailed 
+	     comprehension at the deformity of their own souls. But mostly
+	     to smash, though no mortal ever could. To set free, even 
+	     onto death, these criminals, these unfortunate, these living
+	     beings, who once loved and hoped and wished quietly under the
+	     sky for peace within their hearts. You must keep moving. 
+	     There is a madness here as alive with intentions as a snake 
+	     beneath the water.
+	     """
          12: 'dragonlands desc',
          13: 'meadow desc',
          14: 'meadow desc',
