@@ -42,9 +42,46 @@ graph = {1: [2, 7],
 charms = {'godswear': ['red', 'green', 'gold']
          }
 
+#Provide access to area foes
+encounter = {1: 'Meadow_Gen',
+             2: 'Meadow_Gen',
+	     3: 'Meadow_Gen',
+             4: 'Dragons',
+             5: 'The_Sorrow',
+             6: 'Dragons',
+             7: 'Meadow_Gen',
+             8: 'Twiggins',
+             9: 'Meadow_Gen',
+             10: 'Dragons',
+             11: 'The_Sorrow',
+             12: 'Dragons',
+             13: 'Meadow_Gen',
+             14: 'Twiggins',
+             15: 'Meadow_Gen',
+             16: 'Dragons',
+             17: 'Dragons',
+             18: 'Dragons',
+             19: 'Scorpion',
+             20: 'Spewer',
+             21: 'Spewer',
+             22: 'Forest',
+             23: 'Forest',
+             24: 'Forest',
+             25: 'Scorpion',
+             26: 'Spewer',
+             27: 'Spewer',
+             28: 'Forest',
+             29: 'Forest',
+             30: 'Forest',
+             31: 'Scorpion',
+             32: 'Scorpion',
+             33: 'Scorpion',
+             34: 'Forest',
+             35: 'Forest',
+             36: 'Forest'
+	    }
 
-
-
+#Provide access points between areas
 tile_loc = {1: 'Meadow',
             2: 'Meadow',
 	    3: 'Meadow',

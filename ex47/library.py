@@ -60,19 +60,34 @@ Dragons = [
           [-28, "Gold fire_breath before.", "Gold fire_breath after."],
           [-35, "Gold finisher before.", "Gold finisher after."]]
 	  ]
+The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had frozen
+	     into a dim shadow. You became overly aware of your arms moving awkwardly
+	     to keep you afloat. What an awkward and unnatural thing your life was. If
+	     you were to stop moving your arms, if you were to allow the peace of nature
+	     to silence you back into nonexistence then the shame and pain of your
+	     orchestrations would cease. You could create no new pain. If you became
+	     part of these cool golden depths."""],
+	     [-7, """"""], 
+	     [-9, """"""]
+	     ]
 	  
 Twiggins = [
            ["""A distinctive and offputting sound brought your eyes to a creature best
 	   described as a thumb-sized twig come-alive. Four wings, flat to the sky, 
-	   offset by each other; top at the right, second lower-left, third lower-right, 
+	   offset from each other; top at the right, second lower-left, third lower-right, 
 	   lowest-left, sliced at the air fast enough to leave only the strong bones on
-	   the back, which twitched with each wing beat as a clue to the creatures odd
+	   the back, which twitched with each wing beat, as a clue to the creatures odd
 	   aerial architecture. The Twiggins' legs dangled below it, each foot comprised
 	   of a single webbed V. It held itself close to the wide mouth of the trumpet
 	   flower at which it feasted with three-fingered hands much more alike in appearance
 	   to the pincers of a scorpian or beatle; both hard, with barbed tangs; than
 	   to the fleshy digits of humans.
-	   """, """Single before""", """Single after"""], 
+	   """,
+	   """It's head snaps toward you and you see how ugly its face is. Like a walnut
+	   shell with a slash in it, but it's eyes are disarmingly . . . human. "Vvrumb"
+	   It says. You quickly calculate that Vvrumb is Twiggin for yum. It flies at you,
+	   pincers forward, hungry mouth leaking a gummy purple liquid.""",
+	   """Single after"""], 
 	   ["""Cluster Intro""", """Cluster before""", """Cluster after"""], 
 	   ["""Swarm Intro""", """Swarm before""", """Swarm after"""]
 	   ]	  
