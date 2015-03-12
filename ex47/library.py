@@ -91,7 +91,60 @@ Twiggins = [
 	   ["""Cluster Intro""", """Cluster before""", """Cluster after"""], 
 	   ["""Swarm Intro""", """Swarm before""", """Swarm after"""]
 	   ]	  
-	  
+
+##########################################Friends##########################################
+
+Blacksmith = [
+             ["""Intro dialogue containing clue about polearm"""],
+             ["""Blacksmith gives hero polearm"""],
+             ["""Blacksmith tell hero how to use it, page is added to book."""]
+             ]
+
+Herbalist = [
+            ["""intro herb shop with minor healing and protective elixers"""],
+            ["""Shop inventory"""],
+            ["""tells how to use items"""]
+            ]
+Glasssmith = [
+             ["""Tests hero's mettle. """],
+             ["""Tells true history of humans and dragons. Add page to book
+	      Dragons did not ask for the terrible task of gaurding the souls.
+	      They knew that ungaurded those souls and the riches the created
+	      both in crude gold and in their combined ability to separate and
+	      protect a realm from the rest of existence would soon attract dark
+	      forces. Greed and the lust for realms to press beneath ones thumb
+	      would draw the simple minded and many a creature of tyrannical 
+	      nature, even some of their own. It was the weakest, the alliance
+	      of gold dragons who brought the need to the Green dragons, who in
+	      the 7th century of the current age ruled proudly. It is undoubtedly
+	      because of this pride that they called for immediate relocation, they
+	      themselves moved from the caverns of the forest, to the cold and
+	      unwelcoming territory now called Dragonlands. When, in the next 
+	      century, the alliance of The Red rose to overwhelm the the alliance
+	      of The Green; in the bloody and savage manner that Dragons have;
+	      they took the protectors mantle as their own. This ensured that 
+	      no human would oppose the new powers and that they longstanding peace
+	      between would remain, as their own interests were still kept. It
+	      allowed The Green, having more pride than sense, to succede before
+	      their numbers had dwindled to the post coup numbers of the fallen 
+	      of the old age. Peace among their own was of great interest to The
+	      Red, they did afterall seek to rule all. And more was a much more
+	      attractive all than less.
+	          The White are ever the workers of the shards. 
+	      """],
+             ["""3"""]
+             ]
+Healer = [
+         ["""1"""],
+         ["""2"""],
+         ["""3"""]
+         ]
+#Peacekeeper Dragon
+White_Dragon = [
+               ["""1"""],
+               ["""2"""],
+               ["""3"""]
+               ]
 ##########################################Hitpoints##########################################
 
 Hero = [65]
