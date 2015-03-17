@@ -5,7 +5,7 @@ import textwrap
 from graph import encounter
 
 
-def chooser(self, inc_attacker, current_space):
+def choose_attack(self, inc_attacker, current_space):
     chooser = random.choice(inc_attacker)
     group = random.choice(chooser[2:5])
     #print group
@@ -18,15 +18,31 @@ def chooser(self, inc_attacker, current_space):
     #successful_attack = intro, attack_desc
     #return missed_attack
     #return successful_attack
-    creature = 
 
-def hero_health_change(self, creature, val):
-    
 
+def hero_health(self):
+    hero_hp = Hit_Points['Hero']
+    return hero_hp
+
+###Attack meth should be while func    
+def attack_engine(self):
+    ###Print intro and attack, run health update and print
+    ###Until single contestant health is 0 keep looping 
+    ###through attacks.
+    attacker_sum = 10
+    while ((hero_health('stuff')) > 0) and (attacker_sum > 0):
+        ###print attack and health update
+        ###interpret input as attack and print health update
+        print "attacky stuff"
+        print hero_health
+        #del hero_hp[0]
+        #hero_hp.append(new)
+        #print "Your health is now %d" % hero_e[0]
+        break
 
 
 ###The following two should be combined.
-def health_change(self, creature):
+def health_change(self, ):
     hit = -20
     new_foe_hp = hit_foe(self, chooser, current_space) + hit
     print new_foe_hp
@@ -48,4 +64,4 @@ def foe_attack(self, current_space):
 inc_attacker = Dragons
 current_space = 6 
 
-go = chooser('stuff', inc_attacker, current_space)    
+go = attack_engine('stuff')    
