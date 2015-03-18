@@ -1,7 +1,8 @@
 ###pull from attacks dict randomly, print desc of attack, use value to calculate hp loss. If hero dead end game, if hero lives pass.
 import random
-from library import Dragons, Hit_Points, encounter
 import textwrap
+from sys import exit
+from library import Dragons, Hit_Points, encounter
 
 
 
@@ -11,32 +12,40 @@ def hero_health(self):
  
 def hero_health_change(self, change):
     new = hero_health('self') + change
-    Hit_Points = {'Hero': new}
+    for key, value in Hit_Points.items():
+        Hit_Points["Hero"] = new
     return new
   
 #def attacker_health_change(self, change):
     
     
-#def attack_engine(self, current_space):
-#    while (hero_health('self') > 0) and (attacker_health > 0):
-#        print "attacky stuff"
+def attack_engine(self, current_space):
+    while (hero_health('self') > 0):
+        if (foe_health > 0):
+            print choose_attack('self', current_space)
+        else:
+            print "Your foe perishes at your feet. At surviving, you are victorious."
+            #self.scene()    
 
-        #print "Your health is now %d" % hero_health_change('stuff', )
-#        break
+    else:
+        print "With your last breath you scream \"Arturia!\" then you breath no more."
+        exit(1)
+        
 
 
 def choose_attack(self, current_space):
     foe = encounter[current_space]
     chooser = random.choice(foe)
     group = random.choice(chooser[2:5])
-    val = sum(group[0:1])
+    change = sum(group[0:1])
     lucky = "%r But luck favors you and the attack misses completely." % str(chooser[0:1])
     attack = str(chooser[0:1]), str(group[1:2])
+    update = "Your health is now %s." % hero_health_change('self', change)
     roll = random.randint(0, 4)
     if roll == 1:
         return lucky
     elif roll != 1:
-        return attack  
+        return attack, update  
  
 
 ###The following two should be combined.
@@ -60,5 +69,6 @@ def foe_attack(self, current_space):
     
 
 current_space = 4 
+change = -20
 
-go = choose_attack('stuff', current_space)    
+go = attack_engine('stuff', current_space)    
