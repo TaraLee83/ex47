@@ -9,7 +9,7 @@ from library import Dragons, Hit_Points, encounter
 def hero_health(self):
     hero_hp = Hit_Points['Hero']
     return hero_hp
- 
+ ###write in if statement for change that will end in zero or less, to exit game.
 def hero_health_change(self, change):
     new = hero_health('self') + change
     for key, value in Hit_Points.items():
@@ -29,10 +29,10 @@ def attack_engine(self, current_space):
     val = 0  
     chooser = choose_attack('self', current_space)
     group = random.choice(chooser[2:5])
-    h_change = -10
+    h_change = sum(group[0:1])
     f_change = -10
-    lucky_line = "But luck favors you and the attack misses completely."
-    lucky = lucky_line, str(chooser[1:2])
+    lucky_line = "Luck favors you and the %s attack misses completely." % (str(chooser[0:1]).strip("[]")).strip("'")
+    lucky = str(chooser[1:2]), lucky_line
     first_attack = str(chooser[1:2]), str(group[1:2])
 
     while hero_health('self') > 0:
@@ -41,8 +41,8 @@ def attack_engine(self, current_space):
         group = random.choice(chooser[2:5])
         subsequent_attacks = str(group[1:2])
 
-        if foe_health > 0:
 
+        if foe_health > 0:
             roll = random.randint(0, 4)
             if roll != 1 and val == 0:
                 print first_attack, hero_update
@@ -55,6 +55,7 @@ def attack_engine(self, current_space):
                 val = 1
             elif roll == 1 and val == 1:
                 print lucky_line
+                val = 1
 
 
         else:
@@ -86,4 +87,4 @@ current_space = 4
 change = -20
 
 
-go = tester('stuff', current_space)    
+go = attack_engine('stuff', current_space)    
