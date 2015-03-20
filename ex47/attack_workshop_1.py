@@ -14,6 +14,11 @@ def hero_health_change(self, change):
     new = hero_health('self') + change
     for key, value in Hit_Points.items():
         Hit_Points["Hero"] = new
+        if new <= 0:
+            print """\tYour last breath comes quickly. Your daughter flashes before your eyes.
+        She reaches out to you. You die, leaving her trapped forever.
+        """
+            exit(1)
     return new
   
 #def attacker_health_change(self, change):
