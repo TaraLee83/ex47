@@ -22,12 +22,14 @@ def hero_health_change(self, h_change):
             exit(1)
     return new
 
-def foe_health_change(self, foe, f_change):
-    foes = foe_map[current_space]
-    current_health = Hit_Points[foes][foe]
-    new = current_health + f_change
-    #add append foe health dict entry with new health
-    return new    
+def foe_health_change(self, current_space, foe, f_change):
+    gen_foe = foe_map[current_space]
+    old_val = Hit_Points[gen_foe][foe]
+    new_val = old_val + f_change
+    Hit_Points[gen_foe][foe] = new_val
+    print Hit_Points[gen_foe][foe]
+    
+
   
 def choose_attack(self, current_space):
     foe = encounter[current_space]
@@ -57,7 +59,7 @@ def attack_engine(self, current_space):
     lucky = str(chooser[1:2]), lucky_line
     first_attack = str(chooser[1:2]), str(group[1:2])
     while hero_health('self') > 0:
-        #foe_update = "Your foes health has been struck down to %s." % foe_health_change('self', f_change)
+        #foe_health = 
         foe = (str(chooser[0:1]).strip("[]")).strip("'")
         group = random.choice(chooser[2:5])
         subsequent_attacks = str(group[1:2])
@@ -90,4 +92,4 @@ current_space = 4
 f_change = -10
 
 foe = 'red_dragon'
-go = attack_engine('stuff', current_space)    
+go = foe_health_change('stuff', current_space, foe, f_change)    
