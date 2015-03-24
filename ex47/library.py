@@ -8,7 +8,7 @@ Bag = []
 
 ##########################################Charms##########################################
 
-Charms = {'Dragonlands': 1, 'Fairy': 2}
+Charms = [["Dragons"], ["polearm"], ['Fairy', 2]]
 
 ##########################################Collectibles##########################################
 
@@ -17,49 +17,88 @@ Book = []
 ##########################################Foes##########################################
 
 Dragons = [
-          #Red Dragon
-          [["""The rumbling began beneath your feet. Your eyes traced tremors to the
-	  base of the mountain where lesser rocks tumbled down to the river bed. 
-	  Your eyes climbed the mountain, the world quaked harder. Trees shook loose 
-	  their branches. Just as the relief of the still and faithful sky came into 
-	  filled your vision, smoke poured from the mouth of the volcano and a great red
-	  flash darted forth. There was no way from the valley fast enough to save
-	  your life. But wait, that is not death come to sunder and encase you by a
-	  dead and unthinking catastrophe of nature, it was the other death. Winged,
-	  with terrible fangs and claws and an enormous, barbed tale that this most 
-	  feirsome of all the Dragons snapped with elegant and evil precision to bring
-	  death in an instant. The Red Dragon has awakened.
-	  """], 
-	  [-20, "Red claw attack before.", "Red claw attack after."], 
-	  [-20, "Red tail_swipe before.", "Red tail_swipe after."], 
-	  [-40, "Red fire_breath before.", "Red fire_breath after."], 
-	  [-50, "Red finisher before.", "Red finisher after."]],
-          #Green Dragon 
-          [["""The spruce trees blanket the lowest part of the Eastern snow-capped
-      	  mountain range, their frequency becomes spotted closer to histears
-      	  river. The trees that dot the shoreline are thick and burled, the
-      	  waterfront side stripped of all branches and leaves and enough bark
-      	  to make the snaking river appear to have stripes of white and green
-      	  flanking. It is a disruption in this bone white and deep green striping
-      	  that first catches your eye. Soon after, grey smoke effluent of nostrils
-      	  and bone white just like the trees, eyes, amber afire, seeming to burn
-      	  from within and the bleached-bone teeth that shaped her mouth into 
-      	  a wicked grin, you see now that Dragons can smile. Perhaps this will be
-      	  the last thing you ever learn.
-      	  """], 
-	  [-16, "Green claw attack before.", "Green claw attack after."], 
-	  [-16, "Green tail_swipe before.", "Green tail_swipe after."],
-          [-32, "Green fire_breath before.", "Green fire_breath after."], 
-          [-40, "Green finisher before.", "Green finisher after."]],
+      #Red Dragon
+      [["red_dragon"],
+      ["The rumbling began beneath your feet. Your eyes traced tremors to the " 
+"base of the mountain where lesser rocks tumbled down to the river bed. "
+"Your eyes climbed the mountain, the world quaked harder. Trees shook loose " 
+"their branches. Just as the relief of the still and faithful sky came into " 
+"filled your vision, smoke poured from the mouth of the volcano and a great red "
+"flash darted forth. There was no way from the valley fast enough to save "
+"your life. But wait, that is not death come to sunder and encase you by a "
+"dead and unthinking catastrophe of nature, it was the other death. Winged, "
+"with terrible fangs and claws and an enormous, barbed tale that this most "
+"fiersome of all the Dragons snapped with elegant and evil precision to bring "
+"death in an instant. The Red Dragon has awakened. "
+      ], 
+	  [-20, "The red beast was upon you in a flash. Its' claws bit into your skin. It "
+"slashed high and low."
+	  ], 
+	  [-20, "The Red giant reared, for a moment only its thick haunches and scaled belly "
+"were visible. Then it lurched, shoulders first then haunches. Suddenly the length of its "
+"tail was rushing toward you. It knocked the air out of you and broke at least one rib."
+      ], 
+	  [-40, "The Red Dragon looked away from you. It pointed its muzzle at the sky and took "
+"in a great breath. You leap for cover behind a rock as a sea of flames pour over you and the "
+"rock. Your clothes are on fire. You drop to the ground and roll and beat the flames out of "
+"your garments."
+      ], 
+	  [-50, "The Dragon leaped and beat its wings until it was well above the horizon. Its "
+"circling seemed to stir the clouds. When it came around to the point in its' path farthest "
+"from you it dipped its head directly at you and took great gusts of wind under its wings as "
+"it rushed, flames escaping its maw, wide open in a fanged scream. It scooped you up in its "
+"mouth. One tooth punched through your gut so that you were skewered there. When you reached "
+"a great enough altitude to see the sun at the horizon one last time, the red dragon began to "
+"shake its head side to side. Life left you mercifully fast."
+      ]],
+      #Green Dragon 
+      [["green_dragon"],
+      ["The spruce trees blanket the lowest part of the Eastern snow-capped "
+"mountain range, their frequency becomes spotted closer to histears "
+"river. The trees that dot the shoreline are thick and burled, the "
+"waterfront side stripped of all branches and leaves and enough bark "
+"to make the snaking river appear to have stripes of white and green "
+"flanking. It is a disruption in this bone white and deep green striping "
+"that first catches your eye. Soon after, grey smoke effluent of nostrils "
+"and bone white just like the trees, eyes, amber afire, seeming to burn "
+"from within and the bleached-bone teeth that shaped her mouth into "
+"a wicked grin, you see now that Dragons can smile. Perhaps this will be "
+"the last thing you ever learn. "
+      ], 
+	  [-16, "You saw her chest, like green tinted iron armor a moment before"
+"her claws tore at you. Less like knives and more like blunt sticks as they"
+"tore your skin."	  
+      ], 
+	  [-16, "She launched off of her powerful legs and spun mid air. Her feet"
+"met the ground with a deep thud. You turned to watch helplessly as her tail"
+"crashed into you, knocking the wind out of you and bruising you badly."	  
+      ],
+      [-32, "She backed up quickly, bending trees in her path. Her claws dug"
+"at the ground to speed her retreat. When she reached the edge of the circular"
+"clearing in which you stood she opened her maw and flames jetted out. They"
+"ripped and tore through the air toward you as you threw yourself to the ground"
+"and rolled toward her, and toward the narrow neck of the flame-path."
+      ], 
+      [-40, "The green dragon took flight. One circle around. It rushed toward"
+"you and artfully clasped one giant claw over each arm, clamping your arms, useless,"
+"to your chest. It pulled you up and up. You wondered why it carried you higher still."
+"Then she released you and swooped beneath you, then over you. After two perfect"
+"circles around you as you fell a torrent of flames engulfed you. This was no casual"
+"shot. She had aimed her arc so that the widest of the flame-path seared your body."
+"Her desire for showmanship meant you still breathed as you crashed into the trees" 
+"below breaking nearly every bone in your body."    
+      ]],
 	  #Gold Dragon
-	  [["""What could have been the sun itself, lain upon the mountainside, shifted. 
-	  Diamond-like eyes opened in its' head, that larger than the mouth of the 
-	  river.
-	  """], 
-	  [-14, "Gold tail_swipe before.", "Gold tail_swipe after."],
-          [-28, "Gold fire_breath before.", "Gold fire_breath after."],
-          [-35, "Gold finisher before.", "Gold finisher after."]]
-	  ]
+	  [["gold_dragon"],
+	  ["What could have been the sun itself, lain upon the mountainside, shifted. " 
+"Diamond-like eyes opened in its' head, that larger than the mouth of the "
+"river."
+	  ], 
+	  [-14, "Gold claw attack."],
+	  [-14, "Gold tail_swipe before."],
+          [-28, "Gold fire_breath before."],
+          [-35, "Gold finisher before."]
+	  ]]
 The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had frozen
 	     into a dim shadow. You became overly aware of your arms moving awkwardly
 	     to keep you afloat. What an awkward and unnatural thing your life was. If
@@ -82,13 +121,12 @@ Twiggins = [
 	   flower at which it feasted with three-fingered hands much more alike in appearance
 	   to the pincers of a scorpian or beatle; both hard, with barbed tangs; than
 	   to the fleshy digits of humans.
-	   """,
-	   """It's head snaps toward you and you see how ugly its face is. Like a walnut
-	   shell with a slash in it, but it's eyes are disarmingly . . . human. "Vvrumb"
-	   It says. You quickly calculate that Vvrumb is Twiggin for yum. It flies at you,
+	   """],
+	   ["""It's head snapped toward you and you saw how ugly its face was. Like a walnut
+	   shell with a slash in it, but it's eyes were disarmingly . . . human. "Vvrumb"
+	   It said. You quickly calculate that Vvrumb is Twiggin for yum. It flies at you,
 	   pincers forward, hungry mouth leaking a gummy purple liquid.""",
-	   """Single after"""], 
-	   ["""Cluster Intro""", """Cluster before""", """Cluster after"""], 
+	   """Pincers slashed your flesh. Sharp feet stabbed your arms, neck and face."""], 
 	   ["""Swarm Intro""", """Swarm before""", """Swarm after"""]
 	   ]	  
 
@@ -145,13 +183,49 @@ White_Dragon = [
                ["""2"""],
                ["""3"""]
                ]
+##########################################Hero_Attacks##########################################
+Hero = {-5: 'punch'}               
 ##########################################Hitpoints##########################################
-
-Hero = [65]
-Dragon = [70]
+Hit_Points = {"Hero": 65, "Dragons":{"red_dragon":80, "green_dragon":70, "gold_dragon":65}}
 Fairy = [30]
 Histears = [65] 
+Twiggin = [10]
+##########################################Encounters##########################################
+encounter = {1: 'Meadow_Gen',
+             2: 'Meadow_Gen',
+	         3: 'Meadow_Gen',
+             4: Dragons,
+             5: 'The_Sorrow',
+             6: 'Dragons',
+             7: 'Meadow_Gen',
+             8: 'Twiggins',
+             9: 'Meadow_Gen',
+             10: 'Dragons',
+             11: 'The_Sorrow',
+             12: 'Dragons',
+             13: 'Meadow_Gen',
+             14: 'Twiggins',
+             15: 'Meadow_Gen',
+             16: 'Dragons',
+             17: 'Dragons',
+             18: 'Dragons',
+             19: 'Scorpion',
+             20: 'Spewer',
+             21: 'Spewer',
+             22: 'Memory_Nymphs',
+             23: 'Memory_Nymphs',
+             24: 'Memory_Nymphs',
+             25: 'Scorpion',
+             26: 'Spewer',
+             27: 'Spewer',
+             28: 'Tree_Disease',
+             29: 'Herbalist',
+             30: 'Blacksmith',
+             31: 'Scorpion',
+             32: 'Scorpion',
+             33: 'Scorpion',
+             34: 'Tree_Disease',
+             35: 'Tree_Disease',
+             36: 'Tree_Disease'
+	    }
 
-for group in Dragons:
-    for subgroup in group[0:1]:
-        print subgroup
