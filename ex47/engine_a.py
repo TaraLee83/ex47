@@ -1,6 +1,7 @@
 import random
 from tile_desc import scene
-from graph import graph
+from graph import graph, foe_map
+from library import Twiggins, Hero, Twiggin
 
 direction = {'north': -6, 'east': 1, 
 	      'south': 6, 'west': -1
@@ -10,7 +11,7 @@ action = {'sleep': +3, 'open bag': 0,
 	  }
 directory = {0: direction, 1: action}
 
-class Engine(object):
+class Game(object):
     
     def __init__(self, current_space):																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
         self.current_space = current_space
@@ -26,21 +27,42 @@ class Engine(object):
             self.map_encounter(current_space)
         else:
             print "No encounter rolled."
-#If encounter is rolled            
+           
     def map_encounter(self, current_space):
-        x = encounter[current_space]
-        if 'Meadow_Gen' in x:
-            print "Some sort of Meadow AATTTAAACK!"
-        elif 'Twiggins' in x:
+        gen_foe = foe_map[current_space]
+
+        if 'Meadow_Gen' in gen_foe:
+            inc_attacker = 'Meadow_Gen'
+            print inc_attacker
+        elif 'Twiggins' in gen_foe:
+            inc_attacker = 'Twiggins'
             print "Twiggins attack!"
-        elif 'Dragons' in x:
-            print "Dragon Attack!"
-        elif 'The_Sorrow' in x:
+        elif 'Dragons' in gen_foe:
+            inc_attacker = 'Dragons'
+            print inc_attacker
+        elif 'The_Sorrow' in gen_foe:
+            inc_attacker = 'The_Sorrow'
             print "Attack of Sorrow!"
-	elif 'Scorpion' in x:
-	    print "Scorpion attack!"
-	elif 'Spewer' in x:
-	    print "Spewer attack!"
+    	elif 'Scorpion' in gen_foe:
+    	    inc_attacker = 'Scorpion'
+            print "Scorpion attack!"
+    	elif 'Spewer' in gen_foe:
+    	    inc_attacker = 'Spewer'
+            print "Spewer attack!"
+        elif 'Memory_Nymphs' in gen_foe:
+    	    inc_attacker = 'Memory_Nymphs'
+            print "Memory_Nymphs attack!"            
+    	elif 'Tree_Disease' in gen_foe:
+    	    inc_attacker = 'Tree_Disease'
+            print "Tree_Disease attack!"            
+    	elif 'Herbalist' in gen_foe:
+    	    inc_friendly = 'Herbalist'
+            print "Herbalist encounter"            
+    	elif 'Blacksmith' in gen_foe:
+            inc_friendly = 'Blacksmith'
+            print "Blacksmith encounter"
+        else:
+            print "none"            
         
     def foe_attack(self, inc_attacker, current_space):
         foe = inc_attacker
@@ -51,7 +73,7 @@ class Engine(object):
         beginning = str(group[1:2])
         end = str(group[2:3])
         roll = random.randint(0, 4)
-        health = sum(hero_hp)
+        health = sum(Hero)
         change = sum(val)
         new_val = health + change
         update = "Your health went from %r to %r." % (health, new_val)
@@ -60,7 +82,10 @@ class Engine(object):
         complete = complete.replace("]", "")
         complete = complete.replace("'", " ")
         print complete  
-#If no encounter is rolled.
+
+    def friendlies(self, inc_friendly, current_space):
+        pass
+#If no encounter is rolled.      
     def user_input(self, current_space):																																																																																																																																																																																																																																																							
         user = raw_input(">  ")
         good_value = 0
@@ -77,7 +102,7 @@ class Engine(object):
         
         
 	    
-current_space = 34
+current_space = 30
 
-go = Engine(current_space)
-go.scene(current_space)        
+go = Game(current_space)
+go.map_encounter(current_space)        
