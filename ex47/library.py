@@ -1,4 +1,6 @@
-
+##########################################Actions##########################################
+Actions = [["gather"][1, "twiggins_bane"], [7, "twiggins_bane"], [13, "twiggins_bane"],
+          []]
 
 Dragon1 = {5: "You drink a minor potion of 'protect against Dragon.'"}
 Dragon2 = {15: "You don the fireopal encased in glass."}
@@ -98,7 +100,14 @@ Dragons = [
 	  [-14, "Gold tail_swipe before."],
           [-28, "Gold fire_breath before."],
           [-35, "Gold finisher before."]
-	  ]]
+	  ]]  
+
+Memory_Nymphs = []
+
+Scorpian = []
+
+Spewer = ["Spit acid as they fly over head."]
+
 The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had frozen
 	     into a dim shadow. You became overly aware of your arms moving awkwardly
 	     to keep you afloat. What an awkward and unnatural thing your life was. If
@@ -109,7 +118,9 @@ The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had fr
 	     [-7, """"""], 
 	     [-9, """"""]
 	     ]
-	  
+
+Tree_Disease = []
+
 Twiggins = [
            ["""A distinctive and offputting sound brought your eyes to a creature best
 	   described as a thumb-sized twig come-alive. Four wings, flat to the sky, 
