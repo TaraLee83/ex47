@@ -138,24 +138,33 @@ The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had fr
 Tree_Disease = []
 
 Twiggins = [
-           ["""A distinctive and offputting sound brought your eyes to a creature best
-	   described as a thumb-sized twig come-alive. Four wings, flat to the sky, 
-	   offset from each other; top at the right, second lower-left, third lower-right, 
-	   lowest-left, sliced at the air fast enough to leave only the strong bones on
-	   the back, which twitched with each wing beat, as a clue to the creatures odd
-	   aerial architecture. The Twiggins' legs dangled below it, each foot comprised
-	   of a single webbed V. It held itself close to the wide mouth of the trumpet
-	   flower at which it feasted with three-fingered hands much more alike in appearance
-	   to the pincers of a scorpian or beatle; both hard, with barbed tangs; than
-	   to the fleshy digits of humans.
-	   """],
-	   ["""It's head snapped toward you and you saw how ugly its face was. Like a walnut
-	   shell with a slash in it, but it's eyes were disarmingly . . . human. "Vvrumb"
-	   It said. You quickly calculate that Vvrumb is Twiggin for yum. It flies at you,
-	   pincers forward, hungry mouth leaking a gummy purple liquid.""",
-	   """Pincers slashed your flesh. Sharp feet stabbed your arms, neck and face."""], 
-	   ["""Swarm Intro""", """Swarm before""", """Swarm after"""]
-	   ]	  
+           [["single_twiggin"], ["A distinctive and offputting sound brought your "
+"eyes to a creature best described as a thumb-sized twig come-alive. Four wings, "
+"flat to the sky, offset from each other; top at the right, second lower-left, third "
+"lower-right, lowest-left, sliced at the air fast enough to leave only the strong "
+"bones on the back, which twitched with each wing beat, as a clue to the creatures "
+"odd aerial architecture. The Twiggins' legs dangled below it, each foot comprised "
+"of a single webbed V. It held itself close to the wide mouth of the trumpet flower "
+"at which it feasted with three-fingered hands much more alike in appearance to the "
+"pincers of a scorpian or beatle; both hard, with barbed tangs; than to the fleshy "
+"digits of humans."
+	       ],
+	       [-5, "The Twiggin looked at you. It was obviously agitated. Its whole body was "
+"shaking, perhaps in fear, perhaps in rage. It's mouth opened in a dark gash. It shrieked. "
+"Your ears ached and seemed to fill with liquid, blood? You lost your balance. Your head "
+"throbbed in complaint. "
+           ], 
+           [-10, "The little pest flew forward and spit purple gunk at you. The gummy "
+"substance would not be wiped off but began to change in color as it filled with your "
+"blood."      
+           ],
+           [-15, "It's head snapped toward you and you saw how ugly its face was. "
+"Like a walnut shell with a slash in it, but it's eyes were disarmingly . . . human. "
+"\"Vvrumb\" It said. You quickly calculate that Vvrumb is Twiggin for yum. It flies "
+"at you, pincers forward, hungry mouth leaking a gummy purple liquid. Pincers slashed "
+"your flesh. Sharp feet stabbed your arms, neck and face."
+	       [["twiggin_swarm"], ["""Swarm before"""], ["""Swarm after"""], ["swarm three"]
+	       ]	  
 
 ##########################################Friends##########################################
 
