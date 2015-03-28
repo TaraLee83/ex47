@@ -1,6 +1,6 @@
 ##########################################Actions##########################################
-Actions = [["gather"][1, "twiggins_bane"], [7, "twiggins_bane"], [13, "twiggins_bane"],
-          []]
+Actions = [["gather"][1, "twiggins bane"], [5, "gold"] [7, "twiggins bane"], 
+          [13, "twiggins bane"], [28, "a stone"]]
 
 Dragon1 = {5: "You drink a minor potion of 'protect against Dragon.'"}
 Dragon2 = {15: "You don the fireopal encased in glass."}
@@ -93,13 +93,29 @@ Dragons = [
 	  #Gold Dragon
 	  [["gold_dragon"],
 	  ["What could have been the sun itself, lain upon the mountainside, shifted. " 
-"Diamond-like eyes opened in its' head, that larger than the mouth of the "
-"river."
+"Diamond-like eyes opened in its head, this beast was no longer than the tallest tree. "
+"As it sprang upward you realized at once that it had spotted you and that its size "
+"afforded it great speed."
 	  ], 
-	  [-14, "Gold claw attack."],
-	  [-14, "Gold tail_swipe before."],
-          [-28, "Gold fire_breath before."],
-          [-35, "Gold finisher before."]
+	  [-14, "A flash, you saw, as though sunlight had hardened before you, then your stomach, "
+"chest and arm were slashed by the Dragon's claws."	  
+      ],
+	  [-14, "The Dragon wove a cyclone into the air before you. Spinning circles madly, stirring "
+"soil from the forest floor. It moved closer, still flying in a mad circular dash. It whipped you "	
+"with its tail, throwing you forward and before you could regain your footing its tail hit your "
+"chest, knocking you down." 
+      ],
+      [-28, "When it opened its leathery lips, you stirred to see the white teeth and pink tongue "
+"the mortal and mundane hidden inside the golden dragon. Yet as the flames fell forward, golden fire "
+"from a golden beast, it looked beautiful. You ducked, your back burned. It was hard to believe that "
+"such a creature could die just as any human could."          
+      ],
+      [-35, "As the Golden Dragon stalked around you the realization that you had been edged into "
+"the middle of the clearing dawned. You crouched, one knee to the damp forest floor, ready to make a "
+"move for the opening in the trees ahead. The Dragon sprang, batting your body into the air with his "
+"stomach, then keeping you there by bouncing you off different parts of its body. Its game bruised and "
+"broke you. It dropped you."        
+      ]
 	  ]]  
 
 Memory_Nymphs = []
