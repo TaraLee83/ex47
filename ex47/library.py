@@ -128,7 +128,7 @@ The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had fr
 	     into a dim shadow. You became overly aware of your arms moving awkwardly
 	     to keep you afloat. What an awkward and unnatural thing your life was. If
 	     you were to stop moving your arms, if you were to allow the peace of nature
-	     to silence you back into nonexistence then the shame and pain of your
+	     to silence you back into non-existence then the shame and pain of your
 	     orchestrations would cease. You could create no new pain. If you became
 	     part of these cool golden depths."""],
 	     [-7, """"""], 
@@ -215,9 +215,38 @@ Healer = [
          ]
 #Peacekeeper Dragon
 White_Dragon = [
-               ["""1"""],
-               ["""2"""],
-               ["""3"""]
+               ["Before you appeared, or came upon you from the convergence of the lightening-white "
+"clouds and the mist hanging over the lake, a Dragon, the likes of which had never before been "
+"seen. Almost as long as the mountain was tall and a third as wide. The whole of the land, the deep "
+"green spruces, the ashen grey dead woods, the brown and grey dirt of the mountains foot, the "
+"cerulean depths of sorrow even the uplifting powder-blue sky and the rainbowed prism of the soul "
+"chards reflected from her white scales, so glossy as to look laquered or of molten china. "
+"Everything was softened on her skins armor. You saw yourself. Ragged, tired. Blood left behind from "
+"so many foes as was becoming hard to count. Yet in that instant that you allowed yourself to take "
+"her in, the creature who responded to your prayer you saw in your reflection your love for Arturia. "
+"It made your wounds minor nuisance, it made your fear for your own life a thought you may live to "
+"consider when she was safe and breathing once more, when she was back in your world. No, in her "
+"world. Gods let my love be enough. "               ],
+               ["The White Dragon did not startle. She stared, without blinking, at you. there was no "
+"weapon or sorcery so black that it could stain this white thing red. It seemed an eternity had passed "
+"before she dipped her muzzle and spoke, \"I am greatly dissapointed in you youngling. Your actions "
+"bring sorrow down upon you. I have watched you rage against the whole of existence as if the shaping "
+"of your fortune were the work of any other soul. The Mother and her Babe. You will not be again be "
+"mother until you see with the eyes of every mother. When one weeps for her loss, you too must wreath "
+"in agony for the unbearable pain that shadows love. Of Love. If that human construct best speeds you "
+"on your path whilst you're kept true then I will entertain it. Yet see how you justify violence, conquest "
+"in the name of this thing love? Nothing of worth is born else from necessity.\" She crouched down "
+"ever so slightly and then was aloft. Her body seemed to melt into the sky. A flash of sunlight off of her "
+"tail then she was gone."],
+               ["The White Dragons smile was deep set and satisfying to behold. You guessed that only a "
+"handful of souls had shared this experience. \"I have taken note of the weight of your quest. You will "
+"be with her again soon. You showed enough strength and wisdom to stay the true path. For this I send "
+"you forth with truths; the first born of gratitude and the second born of promise. Others have watched this great "
+"warrior, cutting down all who blocked her way, with one hunger; with one pain, humble herself here, now. "
+"In that you manifest the Mother and all will be reminded that none deserves dominion and all are in " 
+"service to another, thus we share the weight of existence. Next. Do not shield her from the lessons by which "
+"you have survived. Never has an Everless risen that had not been forged in the fires of the wilds.\" "
+"Your daughter, young Everless."               ]
                ]
 ##########################################Hero_Attacks##########################################
 Hero = {-5: 'punch'}               
@@ -232,9 +261,9 @@ encounter = {1: 'Meadow_Gen',
 	         3: 'Meadow_Gen',
              4: Dragons,
              5: 'The_Sorrow',
-             6: 'Dragons',
+             6: Dragons,
              7: 'Meadow_Gen',
-             8: 'Twiggins',
+             8: Twiggins,
              9: 'Meadow_Gen',
              10: 'Dragons',
              11: 'The_Sorrow',
