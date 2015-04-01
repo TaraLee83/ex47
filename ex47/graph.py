@@ -43,9 +43,9 @@ charms = {'godswear': ['red', 'green', 'gold']
          }
 
 #Provide access to area foes
-encounter = {1: 'Meadow_Gen',
+foe_map = {1: 'Meadow_Gen',
              2: 'Meadow_Gen',
-	     3: 'Meadow_Gen',
+	         3: 'Meadow_Gen',
              4: 'Dragons',
              5: 'The_Sorrow',
              6: 'Dragons',
@@ -84,7 +84,7 @@ encounter = {1: 'Meadow_Gen',
 #Provide access points between areas
 tile_loc = {1: 'Meadow',
             2: 'Meadow',
-	    3: 'Meadow',
+	        3: 'Meadow',
             4: 'Dragonlands',
             5: 'Dragonlands',
             6: 'Dragonlands',

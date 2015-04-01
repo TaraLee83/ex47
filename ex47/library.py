@@ -118,7 +118,25 @@ Dragons = [
       ]
 	  ]]  
 
-Memory_Nymphs = []
+Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a phantasmagoria of "
+"pastels, like a dream of the surrounding landscape danced, the shape closest to spheres now and "
+"parabolic uni-colored rainbows the next, too bold of perriwinkle, or lemon drop, or lime to have "
+"been imagined, yet unnatural. As you thought to look away the movements became more intentional "
+"patterns formed, dots and arches pulled together and colors slowed their shifting. Before you "
+"materialized a creature. Male perhaps, beautiful. His face never resting in one form, his body "
+"obfuscated to appear only as form behind a thick mist veil. He reached a lean arm out toward you "
+"the palm lowered to a rock beside the falls small pool. \"Come, sit with me.\" Even his voice "
+"melted through range and tone. Every part of him was a tiny part of someone you had known at some "
+"point, some you remembered; the corner of your husband's mouth, your friends unmistakably bright "
+"green eyes, but then it would melt into someone else. So quickly did he change that it took no time "
+"at all to arrive, unsettled, at the realization the phantom knew the parts of your life that you "
+"did not. Certainly souls from before you had been forced to leave your memories behind in this world "
+"but perhaps even moments from a life that you were to young to remember either way. How he could "
+"know truly all about you unsettled you. \"You have many questions,\" your mother's smile, oh gods it "
+"has been a lifetime, \"I have many answers. I know you very well Karia, daughter of Janya. Won't "
+"you sit by me. Let us talk about the past.\""],
+                [65, "Talk"],
+                ["attack"]]
 
 Scorpian = []
 
@@ -175,17 +193,29 @@ Blacksmith = [
              ]
 
 Herbalist = [
-            ["""intro herb shop with minor healing and protective elixers"""],
+            ["The distinct smell and orange brown glow of cypress welcomed you as you "
+"stepped inside the fragrant shop. The wood had needed harvesting from the southern gulf, "
+"those oft-swamped marshes that prevented a southernmost trail between Garzhed forest and "
+"the broken desert. Most of the herbs you smelled seemed local though, lilac and rosemary "
+"most pungeant among them, though beneath those you caught smells more foul, something " 
+"acrid. Jars of thick grey pultice line the shelves of the wall to the right, the case "
+"on the table before you holds thumb-sized bottles, jewel colored; saphire, ruby, amethyst "
+"darkened within by syrups. From the left hang bulk dried herbs and small animals, their "
+"furs intact but well waxed. The man behind the counter, fiery red hair atop his head, a "
+"trim beard and small hands going quickly about his work of sewing two dark, furry, mostly "
+"indescribable pieces together, spoke to you without looking up from his work. \"Welcome. "
+"My council is free with purchase of my goods. If nothing ails you today, look ahead. No "
+"soul walks free of needing for long."           ],
             ["""Shop inventory"""],
             ["""tells how to use items"""]
             ]
-Glasssmith = [
+Desert_Scholar = [
              ["""Tests hero's mettle. """],
              ["""Tells true history of humans and dragons. Add page to book
 	      Dragons did not ask for the terrible task of gaurding the souls.
-	      They knew that ungaurded those souls and the riches the created
+	      They knew that ungaurded, those souls and the riches they created,
 	      both in crude gold and in their combined ability to separate and
-	      protect a realm from the rest of existence would soon attract dark
+	      protect a realm from the rest of existence, would soon attract dark
 	      forces. Greed and the lust for realms to press beneath ones thumb
 	      would draw the simple minded and many a creature of tyrannical 
 	      nature, even some of their own. It was the weakest, the alliance
@@ -208,7 +238,7 @@ Glasssmith = [
 	      """],
              ["""3"""]
              ]
-Healer = [
+Meadow_Mystic = [
          ["""1"""],
          ["""2"""],
          ["""3"""]
