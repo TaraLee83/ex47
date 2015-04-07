@@ -1,5 +1,5 @@
 ##########################################Actions##########################################
-Actions = [["gather"][1, "twiggins bane"], [5, "gold"] [7, "twiggins bane"], 
+Actions = [["gather"],[1, "twiggins bane"], [5, "gold"], [7, "twiggins bane"], 
           [13, "twiggins bane"], [28, "a stone"]]
 
 Dragon1 = {5: "You drink a minor potion of 'protect against Dragon.'"}
@@ -136,9 +136,10 @@ Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a p
 "has been a lifetime, \"I have many answers. I know you very well Karia, daughter of Janya. Won't "
 "you sit by me. Let us talk about the past.\""],
                 [65, "Talk"],
-                ["attack"]]
+                ["attack"]
+    ]
 
-Scorpian = []
+Scorpians = ["A couple of nasty scorpian attacks."]
 
 Spewer = ["Spit acid as they fly over head."]
 
@@ -156,7 +157,7 @@ The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had fr
 Tree_Disease = []
 
 Twiggins = [
-           [["single_twiggin"], ["A distinctive and offputting sound brought your "
+           ["A distinctive and offputting sound brought your "
 "eyes to a creature best described as a thumb-sized twig come-alive. Four wings, "
 "flat to the sky, offset from each other; top at the right, second lower-left, third "
 "lower-right, lowest-left, sliced at the air fast enough to leave only the strong "
@@ -166,8 +167,8 @@ Twiggins = [
 "at which it feasted with three-fingered hands much more alike in appearance to the "
 "pincers of a scorpian or beatle; both hard, with barbed tangs; than to the fleshy "
 "digits of humans."
-	       ],
-	       [-5, "The Twiggin looked at you. It was obviously agitated. Its whole body was "
+	         ],
+	         [-5, "The Twiggin looked at you. It was obviously agitated. Its whole body was "
 "shaking, perhaps in fear, perhaps in rage. It's mouth opened in a dark gash. It shrieked. "
 "Your ears ached and seemed to fill with liquid, blood? You lost your balance. Your head "
 "throbbed in complaint. "
@@ -181,16 +182,47 @@ Twiggins = [
 "\"Vvrumb\" It said. You quickly calculate that Vvrumb is Twiggin for yum. It flies "
 "at you, pincers forward, hungry mouth leaking a gummy purple liquid. Pincers slashed "
 "your flesh. Sharp feet stabbed your arms, neck and face."
-	       [["twiggin_swarm"], ["""Swarm before"""], ["""Swarm after"""], ["swarm three"]
-	       ]	  
+	        ]], [["twiggin_swarm"], ["""Swarm before"""], ["""Swarm after"""], ["swarm three"]
+	        ]
+
+Twiggin_Swarm = ["You have stumbled into an active twiggin nest. An upright cylinder, about "
+"three feet tall. It is made up mostly of brush; sticks, leaves and long grasses. The hollow "
+"structure is striped horizontally by a white gummy substance. The whole thing smells like "
+"a mixture of the most acrid of lemons and diesel exhaust. The pungeant fumes forced bile to "
+"rise in your throat. One shrill, kreeeep! was answered by several more, then a cacaphony of "
+"shrieks erupted from the nest. An army of Twiggins poured forth; pincers cut the air: "
+"ksh, ksh. Their mouths opened wide to hold an oozing purple goop that spilled over onto their "
+"brown cracked lips. They form a wall between you and the nest."],
+           [-14, "The dissonant noise of slashing pincers from the suspended, pulsating wall of "
+"Twiggins, falls into synch, ksh, ksh, ksh. They open and slice in unison. Your skin goes cold. "
+"Every fine hair on your body stands on end. As one, the murderous curtain comes at you, they "
+"slashed every inch of your body as they landed. Some two hundred sharp feet found purchase, "
+"then they set at you even more viciously. You threw yourself to the ground and again, "
+"breaking them beneath you. When your hands were free you pulled the Twiggins from your scalp "
+"as your own blood flowed into your eyes, stinging and blinding you."
+           ],
+           [-14, "The suspended wall of Twiggins breaks right. Retaining form; they rise and "
+"join ends to create a living cylinder above you. They circle above. A gutteral hum breaks  "
+"through the scissoring clamor of their flight. All at once hundreds of mouths open, rust-red "
+"tongues dart forward and purple goop comes pouring down over your head. The goop melds to your "
+"body, it spreads until it covers every inch of you. You find the goop on your bare hands turns "
+"red first. As blood is drawn from your body, into the goop, you become faint. "
+           ],
+           [-10, "All at once a the swarm of Twiggins emitted a shrill and grating shriek. You "
+"covered your ears but the pain overwhelmed you. You ran. They pursued you all the way to the "
+"tiny marshy lake nearby. They flew at you, their shriek drew blood from your ears. You dove "
+"into the water. The massive carp didn't mind your presence but took the opportunity to leap "
+"up out of the water to catch several Twiggins for their lunch. "           
+           ]]
+
 
 ##########################################Friends##########################################
 
 Blacksmith = [
-             ["""Intro dialogue containing clue about polearm"""],
-             ["""Blacksmith gives hero polearm"""],
-             ["""Blacksmith tell hero how to use it, page is added to book."""]
-             ]
+          ["Intro dialogue containing clue about polearm"],
+          ["Blacksmith gives hero polearm"],
+          ["Blacksmith tell hero how to use it, page is added to book."]
+          ]
 
 Herbalist = [
             ["The distinct smell and orange brown glow of cypress welcomed you as you "
@@ -205,10 +237,14 @@ Herbalist = [
 "trim beard and small hands going quickly about his work of sewing two dark, furry, mostly "
 "indescribable pieces together, spoke to you without looking up from his work. \"Welcome. "
 "My council is free with purchase of my goods. If nothing ails you today, look ahead. No "
-"soul walks free of needing for long."           ],
-            ["""Shop inventory"""],
-            ["""tells how to use items"""]
-            ]
+"soul walks free of needing for long."],
+            ["\"Here is my price list, please tell me what you would like\""
+"Draught of Internal Compass 15" 
+"Iron Armor 20"            
+"Minor Healing Draught 10 "
+"Major Healing Draught 20 "
+"Protect The Past 20"
+            ]]
 Desert_Scholar = [
              ["""Tests hero's mettle. """],
              ["""Tells true history of humans and dragons. Add page to book
@@ -281,46 +317,47 @@ White_Dragon = [
 ##########################################Hero_Attacks##########################################
 Hero = {-5: 'punch'}               
 ##########################################Hitpoints##########################################
-Hit_Points = {"Hero": 65, "Dragons":{"red_dragon":80, "green_dragon":70, "gold_dragon":65}}
+Hit_Points = {"Hero": 65, "Dragons":{"red_dragon":80, "green_dragon":70, "gold_dragon":65}, "Scorpians":{"marigold":30, 
+"slate":25, "cobalt":20}}
 Fairy = [30]
 Histears = [65] 
 Twiggin = [10]
 ##########################################Encounters##########################################
-encounter = {1: 'Meadow_Gen',
-             2: 'Meadow_Gen',
-	         3: 'Meadow_Gen',
+encounter = {1: Twiggins,
+             2: Twiggins,
+	           3: 'Tile_Change',
              4: Dragons,
              5: 'The_Sorrow',
              6: Dragons,
-             7: 'Meadow_Gen',
-             8: Twiggins,
-             9: 'Meadow_Gen',
-             10: 'Dragons',
+             7: Twiggins,
+             8: Meadow_Mystic,
+             9: 'Tile_Change',
+             10: Dragons,
              11: 'The_Sorrow',
-             12: 'Dragons',
-             13: 'Meadow_Gen',
-             14: 'Twiggins',
-             15: 'Meadow_Gen',
-             16: 'Dragons',
-             17: 'Dragons',
-             18: 'Dragons',
-             19: 'Scorpion',
-             20: 'Spewer',
-             21: 'Spewer',
+             12: Dragons,
+             13: Twiggins,
+             14: Twiggins,
+             15: 'Tile_Change',
+             16: Dragons,
+             17: Dragons,
+             18: Dragons,
+             19: Scorpians,
+             20: Spewer,
+             21: Spewer,
              22: 'Memory_Nymphs',
              23: 'Memory_Nymphs',
              24: 'Memory_Nymphs',
-             25: 'Scorpion',
-             26: 'Spewer',
-             27: 'Spewer',
-             28: 'Tree_Disease',
+             25: Desert_Scholar,
+             26: Spewer,
+             27: Spewer,
+             28: Tree_Disease,
              29: 'Herbalist',
              30: 'Blacksmith',
-             31: 'Scorpion',
-             32: 'Scorpion',
-             33: 'Scorpion',
-             34: 'Tree_Disease',
-             35: 'Tree_Disease',
-             36: 'Tree_Disease'
+             31: Scorpians,
+             32: Scorpians,
+             33: Scorpians,
+             34: Tree_Disease,
+             35: Tree_Disease,
+             36: Tree_Disease
 	    }
 
