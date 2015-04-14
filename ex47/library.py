@@ -135,11 +135,25 @@ Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a p
 "know truly all about you unsettled you. \"You have many questions,\" your mother's smile, oh gods it "
 "has been a lifetime, \"I have many answers. I know you very well Karia, daughter of Janya. Won't "
 "you sit by me. Let us talk about the past.\""],
-                [65, "Talk"],
+                ["reset everything", ""],
                 ["attack"]
     ]
 
-Scorpians = ["A couple of nasty scorpian attacks."]
+Scorpian = [["The sand shifts slightly, at first it seems a trick of the intense heat "
+"then a mass arrises, sand like a shower falls from its form. That being revealed to "
+"be the size of an obese house cat. Quickly though, legs like sharp sticks reveal "
+"themselves. Last, it lifts its head. Its buldging eyes squint at you a moment before "
+"its MOUTH FANGS come up from the sand, sharp and barb-tipped. It's mouth cracks open "
+"and a tiny dry tongue flicks quickly side to side, tic, tic, tic. "],
+            [-10, "The Scorpian backed away slowly. Then it lunged forward, throwing its tail "
+"over its head. Suddenly its stinger jabbed your skin. A noxious feeling came over you. "
+"The poison worked fast. You felt sick already."],
+            [-10, "Somehow the sharp points of the Scorpians tiny feet didn't sink into "
+"sand. It drew itself up to full height and raised its pincers, saliva dripping from "
+"its open maw. Its pincers clanged open and shut. Suddenly it scuttled toward you, "
+"It sank a pincer into one hip and into the opposite arm. It emitted a gurgeling sound "
+"as it shook its head side to side to drive the pincer points deeper into your skin. "]
+            ]
 
 Spewer = ["Spit acid as they fly over head."]
 
@@ -154,7 +168,16 @@ The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had fr
 	     [-9, """"""]
 	     ]
 
-Tree_Disease = []
+Tree_Disease = [
+               ["The aching began in your right foot. As if the bone were straining "
+"to burst. No injury could account for the sudden and quickly increasing pain. You "
+"looked behind you to see if perhaps you had unwittingly stepped on a trap or into "
+"a crevice. There you saw across the path the root of an Eating Tree. You had crushed "
+"it underfoot without even noticing. Yellow-green spores still danced in the sunlight "
+"behind you. "
+               ],
+               [""]
+
 
 Twiggins = [
            ["A distinctive and offputting sound brought your "
@@ -317,8 +340,7 @@ White_Dragon = [
 ##########################################Hero_Attacks##########################################
 Hero = {-5: 'punch'}               
 ##########################################Hitpoints##########################################
-Hit_Points = {"Hero": 65, "Dragons":{"red_dragon":80, "green_dragon":70, "gold_dragon":65}, "Scorpians":{"marigold":30, 
-"slate":25, "cobalt":20}}
+Hit_Points = {"Hero": 65, "Dragons":{"red_dragon":80, "green_dragon":70, "gold_dragon":65}, "Scorpian": 15}
 Fairy = [30]
 Histears = [65] 
 Twiggin = [10]
