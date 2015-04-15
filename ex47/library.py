@@ -13,7 +13,7 @@ Bag = []
 Charms = [["Dragons"], ["polearm"], ['Fairy', 2]]
 
 ##########################################Collectibles##########################################
-
+###Pages, Intro to world, notes about things learned, ?map?
 Book = []
 
 ##########################################Foes##########################################
@@ -135,8 +135,28 @@ Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a p
 "know truly all about you unsettled you. \"You have many questions,\" your mother's smile, oh gods it "
 "has been a lifetime, \"I have many answers. I know you very well Karia, daughter of Janya. Won't "
 "you sit by me. Let us talk about the past.\""],
-                ["reset everything", ""],
-                ["attack"]
+                ["del_weapon", "famous exploits"],
+                ["del all strength bonuses", "The green season, that of your eleventh year. "
+"You awoke in lands you'd never meant to set foot in. None had by choice. Your sweet mother "
+"had tucked you ever so gently into a crevass oer A Meer, but I must remember that you forget your homeland. "
+"The cold western waters; A Meer. Her teeth of of rock to slice and her pets the vicious and "
+"plentiful eel, with teeth that shone in the sun. They lay beneath you. Above, lay a climb straight "
+"to the sky. Your hands to marry only with rock, sharpened by irregular gusts and sea spray. "
+"When the sun tore sweet sleep, like a dark blanket from you and left you to "
+"discover your situation you took stock. Smart, not to hurry. Time could only dry the spray and dew from those treacherous "
+"handholds anyway. You knew our land to be the regurgitation of A vumu. And that that angry "
+"mother's stomach had brought forth black glass for the world to sit upon. Layered heavily to "
+"sit strong but sharp and brittle where revealed to A Meer's salty fingers. You were quite "
+"the billy goat but this was no mountain. A Meer watched you strip your human ornament and bind "
+"it thickly over your hands. She watched you carefully ascend, thick boulder by slightest crag. "
+"All the time she watched expecting you to join her. She had decided that she quite loved you "
+"I beleive she would have made you a creature of forever just to watch you swim under the sun. "
+"But up you went. Only drops of blood, that poured from your hands as the rock finally bit through "
+"your bandaging, reached her and became hers. When you set foot upon the Meadow you were Woman, "
+"more, to your people, you were Frelt. Woman of the world. None to make a fish-wife of you. It is "
+"your mother, you of flesh, who decides your path. And you did not remember this? Do you see how "
+"valuable memories are. They are more than ruby or sapphire, they are they fire that forged your "
+"soul."                ]
     ]
 
 Scorpian = [["The sand shifts slightly, at first it seems a trick of the intense heat "
