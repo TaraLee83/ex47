@@ -135,7 +135,26 @@ Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a p
 "know truly all about you unsettled you. \"You have many questions,\" your mother's smile, oh gods it "
 "has been a lifetime, \"I have many answers. I know you very well Karia, daughter of Janya. Won't "
 "you sit by me. Let us talk about the past.\""],
-                ["del_weapon", "famous exploits"],
+                ["del_weapon", "Do you ever look at yourself, naked in the mirror? I can not see "
+"the other world. But I imagine that your body, its map of scars, burns, markings that you have "
+"forgotten all the meanings of make your own body as a strangers vessel. Does that not bother you "
+"to wear this person that you left in the name of love. Do you ever really forget that she is about? "
+"You are quite brave to choose to embrace her again so suddenly and by chance meeting. You came into "
+"woman-hood in what the old folk now call the age of fires. Torrhin sought to rest the throne from "
+"Goethe by alliance with The Gold. But politics bore me. As they did you. The slice on your outer "
+"left thigh was given you by your meadow-dwelling friend. All of girlhood spent giggling and scheming "
+"flashed before you eyes as you cut her down before you. You couldn't stop yourself from uttering, "I'm"
+"so sorry, I'm so sorry. One might have thought you'd been struck dumb. She wouldn't be the last of "
+"your friends to die, not even by your own hand. You humans are so confused; too many alliances; blood "
+"tribes, mates. The scar that runs the length of the opposite arm, that was from the burning time as "
+"well, though it was no friends blade that drew your blood that night. It was one of the eleven who had "
+"first raised the call to overthrow the king. All your fury you threw at him. As you slashed you saw "
+"the fields, that had fed your friends families, that you had spent your girlhood running in, that time "
+"had frozen with your first kiss in, burning, their houses burning, their corpses burning. You forced "
+"him into retreat. The hill behind you gave you height and you steered him toward the steady fire of "
+"a shed. You brought him near enough to wear him out and then you took his life. That was the first "
+"that had felt like victory. A funny thing when killing feels like victory. But you inhaled sweet air "
+"and that hatred inside of you felt sated, just for that moment."],
                 ["del all strength bonuses", "The green season, that of your eleventh year. "
 "You awoke in lands you'd never meant to set foot in. None had by choice. Your sweet mother "
 "had tucked you ever so gently into a crevass oer A Meer, but I must remember that you forget your homeland. "
@@ -156,7 +175,7 @@ Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a p
 "more, to your people, you were Frelt. Woman of the world. None to make a fish-wife of you. It is "
 "your mother, you of flesh, who decides your path. And you did not remember this? Do you see how "
 "valuable memories are. They are more than ruby or sapphire, they are they fire that forged your "
-"soul."                ]
+"soul."]
     ]
 
 Scorpian = [["The sand shifts slightly, at first it seems a trick of the intense heat "
