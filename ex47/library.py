@@ -203,19 +203,40 @@ Spewer = [["A sqwauk pierced the air, an unfortunate looking creature entered yo
 "animal out of its misery. Two yellow land on you, one burns into your shoulder, the other "
 "burns a whole in the top of your shoe."],
          [-5, "The bird is almost quiet as it passes overhead. Then haaagch, it sends a toxic "
-"yellow blob down, where is burns a hole in the shoulder of your shirt."]
+"yellow blob down, where it burns a hole in the shoulder of your shirt."]
          ]
 
-The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had frozen
-	     into a dim shadow. You became overly aware of your arms moving awkwardly
-	     to keep you afloat. What an awkward and unnatural thing your life was. If
-	     you were to stop moving your arms, if you were to allow the peace of nature
-	     to silence you back into non-existence then the shame and pain of your
-	     orchestrations would cease. You could create no new pain. If you became
-	     part of these cool golden depths."""],
-	     [-7, """"""], 
-	     [-9, """"""]
-	     ]
+The_Sorrow = [["As the water soaked your clothing, the great stillness and peace of it seemed "
+"to seep into your skin. You felt calm. But as worries left your mind so to did need, anger "
+"all of it, every element of the fire within drowned. You wondered if you too were a fire "
+"to be put out."],
+             [-5, "A stillness swept inside of you as if all the world had frozen into a dim "
+"shadow. You became overly aware of your arms moving awkwardly to keep you afloat. What an "
+"awkward and unnatural thing your life was. If you were to stop moving your arms, if you were "
+"to allow the peace of nature to silence you back into non-existence then the shame and pain "
+"of your orchestrations would cease. You could create no new pain; if you became part of these "
+"cool golden depths."],
+	           [-10, "Perhaps its brightness, the awe inspiring luminosity of the submerged mountain "
+"of fresh gold, brought all else into darkness. Perhaps it was a reaction to the mineral makeup "
+"of the metal that taste could not be had nor could the bouquet of forest, volcano or the jasmine "
+"kissing the Northern shore be detected. Indeed, only sight remained to you and could it be that "
+"even your eyes were failing? Could this grey dusk be falling so quickly. Where were the firebugs "
+"that had danced over the waters, making its glassy surface glitter? Where were the clouds that "
+"parted around A Vumu, married with her sulfuric gasses then traveled out to the East to "
+"provide potion to creatures of the dark sea. All the world had ceased its breath. Here, the golden "
+"mountain beneath you shone brighter than the sun of any land. Its heat radiated into you skin. You "
+"were the only thing of some small warmth in this world that had sputtered out but an eternal fire, "
+"a guilded hearth lay beneath to warm you forever. "], 
+	           [-20, "The cold reached through your skin and grabbed hold of your bones. The pain didn't "
+"cut or even burn like other cold. It was a lullaby. It absorbed all that had been you. Your "
+"responsibility for your daughter, the sour aching that had settled into your belly the moment you had "
+"seen her laying motionless, the fear that you pretended not to feel with every step; as you ran through "
+"this strange land that yet knew you and had an appetite for your blood, the weariness "
+"that had grown with every mile trodden and the great misery that had made breathing scarce "
+"a possibility and would suffocate you slowly with thoughts of all that you had not yet accomplished. "
+"Perhaps the riches of man did contain some innately useful property. Your body was almost completely "
+"numb. Wading had become difficult."]
+	           ]
 
 Tree_Disease = ["The aching began in your right foot. As if the bone were straining "
 "to burst. No injury could account for the sudden and quickly increasing pain. You "
