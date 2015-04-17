@@ -135,7 +135,7 @@ Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a p
 "know truly all about you unsettled you. \"You have many questions,\" your mother's smile, oh gods it "
 "has been a lifetime, \"I have many answers. I know you very well Karia, daughter of Janya. Won't "
 "you sit by me. Let us talk about the past.\""],
-                ["del_weapon", "Do you ever look at yourself, naked in the mirror? I can not see "
+                [-5, "del_weapon", "Do you ever look at yourself, naked in the mirror? I can not see "
 "the other world. But I imagine that your body, its map of scars, burns, markings that you have "
 "forgotten all the meanings of make your own body as a strangers vessel. Does that not bother you "
 "to wear this person that you left in the name of love. Do you ever really forget that she is about? "
@@ -143,11 +143,11 @@ Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a p
 "woman-hood in what the old folk now call the age of fires. Torrhin sought to rest the throne from "
 "Goethe by alliance with The Gold. But politics bore me. As they did you. The slice on your outer "
 "left thigh was given you by your meadow-dwelling friend. All of girlhood spent giggling and scheming "
-"flashed before you eyes as you cut her down before you. You couldn't stop yourself from uttering, "I'm"
+"flashed before you eyes as you cut her down before you. You couldn't stop yourself from uttering, I'm "
 "so sorry, I'm so sorry. One might have thought you'd been struck dumb. She wouldn't be the last of "
 "your friends to die, not even by your own hand. You humans are so confused; too many alliances; blood "
 "tribes, mates. The scar that runs the length of the opposite arm, that was from the burning time as "
-"well, though it was no friends blade that drew your blood that night. It was one of the eleven who had "
+"well, though it was no friend's blade that drew your blood that night. It was one of the eleven who had "
 "first raised the call to overthrow the king. All your fury you threw at him. As you slashed you saw "
 "the fields, that had fed your friends families, that you had spent your girlhood running in, that time "
 "had frozen with your first kiss in, burning, their houses burning, their corpses burning. You forced "
@@ -155,7 +155,7 @@ Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a p
 "a shed. You brought him near enough to wear him out and then you took his life. That was the first "
 "that had felt like victory. A funny thing when killing feels like victory. But you inhaled sweet air "
 "and that hatred inside of you felt sated, just for that moment."],
-                ["del all strength bonuses", "The green season, that of your eleventh year. "
+                [-5, "del all strength bonuses", "The green season, that of your eleventh year. "
 "You awoke in lands you'd never meant to set foot in. None had by choice. Your sweet mother "
 "had tucked you ever so gently into a crevass oer A Meer, but I must remember that you forget your homeland. "
 "The cold western waters; A Meer. Her teeth of of rock to slice and her pets the vicious and "
@@ -194,7 +194,17 @@ Scorpian = [["The sand shifts slightly, at first it seems a trick of the intense
 "as it shook its head side to side to drive the pincer points deeper into your skin. "]
             ]
 
-Spewer = ["Spit acid as they fly over head."]
+Spewer = [["A sqwauk pierced the air, an unfortunate looking creature entered your "
+"air space. It seemed to be in the midst of a belching fit. Each gassy eruption caused the "
+"dirt-brown bird to spit up a toxic looking yellow wad that fell onto whatever happened to "
+"be below it. Leaves and earth sizzled under the yellow spit. It looked to be flying in "
+"your direction."],
+         [-10, "The gurgeling and belching overhead is nerve-wracking. Someone needs to put this "
+"animal out of its misery. Two yellow land on you, one burns into your shoulder, the other "
+"burns a whole in the top of your shoe."],
+         [-5, "The bird is almost quiet as it passes overhead. Then haaagch, it sends a toxic "
+"yellow blob down, where is burns a hole in the shoulder of your shirt."]
+         ]
 
 The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had frozen
 	     into a dim shadow. You became overly aware of your arms moving awkwardly
@@ -207,15 +217,13 @@ The_Sorrow = [[-5, """A stillness swept inside of you as if all the world had fr
 	     [-9, """"""]
 	     ]
 
-Tree_Disease = [
-               ["The aching began in your right foot. As if the bone were straining "
+Tree_Disease = ["The aching began in your right foot. As if the bone were straining "
 "to burst. No injury could account for the sudden and quickly increasing pain. You "
 "looked behind you to see if perhaps you had unwittingly stepped on a trap or into "
 "a crevice. There you saw across the path the root of an Eating Tree. You had crushed "
 "it underfoot without even noticing. Yellow-green spores still danced in the sunlight "
 "behind you. "
-               ],
-               [""]
+               ]
 
 
 Twiggins = [
@@ -247,7 +255,7 @@ Twiggins = [
 	        ]], [["twiggin_swarm"], ["""Swarm before"""], ["""Swarm after"""], ["swarm three"]
 	        ]
 
-Twiggin_Swarm = ["You have stumbled into an active twiggin nest. An upright cylinder, about "
+Twiggin_Swarm = [["You have stumbled into an active twiggin nest. An upright cylinder, about "
 "three feet tall. It is made up mostly of brush; sticks, leaves and long grasses. The hollow "
 "structure is striped horizontally by a white gummy substance. The whole thing smells like "
 "a mixture of the most acrid of lemons and diesel exhaust. The pungeant fumes forced bile to "
@@ -402,7 +410,7 @@ encounter = {1: Twiggins,
              16: Dragons,
              17: Dragons,
              18: Dragons,
-             19: Scorpians,
+             19: Scorpian,
              20: Spewer,
              21: Spewer,
              22: 'Memory_Nymphs',
@@ -414,9 +422,9 @@ encounter = {1: Twiggins,
              28: Tree_Disease,
              29: 'Herbalist',
              30: 'Blacksmith',
-             31: Scorpians,
-             32: Scorpians,
-             33: Scorpians,
+             31: Scorpian,
+             32: Scorpian,
+             33: Scorpian,
              34: Tree_Disease,
              35: Tree_Disease,
              36: Tree_Disease
