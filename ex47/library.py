@@ -238,12 +238,28 @@ The_Sorrow = [["As the water soaked your clothing, the great stillness and peace
 "numb. Wading had become difficult."]
 	           ]
 
-Tree_Disease = ["The aching began in your right foot. As if the bone were straining "
+Tree_Disease = ["The aching began in your feet. As if the bones were straining "
 "to burst. No injury could account for the sudden and quickly increasing pain. You "
 "looked behind you to see if perhaps you had unwittingly stepped on a trap or into "
 "a crevice. There you saw across the path the root of an Eating Tree. You had crushed "
 "it underfoot without even noticing. Yellow-green spores still danced in the sunlight "
-"behind you. "
+"behind you. "],
+               [-10, "The ache spread like wild-fire; up your legs and into your hips. Fever "
+"lit your brow. You'd begun to sweat by the time the aching touched your chest. Each "
+"breath wrung a weak cry from you. You could stand no longer. The wet tangle of leaves "
+"and mud beneath you made a sickening sucking sound as your back hit the forest floor. "],
+               [-15, "A cold sweat came on. You began to shiver. Ahead of you, leaning "
+"with her shoulder against a redwood, is Arturia. She is smiling that in that way of hers "
+"both condescending and loving. Her arms are folded in front of her. She uses one elbow to "
+"push herself away from the tree and she turns her back on you. You ran to her but she was "
+"not behind the tree. Your hands trembled. More phantoms appeared around you. Some saw you "
+"some didn't. Your husband held your son close. They wept in front of two tiny coffins. The "
+"nearer coffin shook as someone pounded the lid from inside, screaming at the top of her "
+"lungs. "],
+               [20, "Dizzyness overcame you. Fever caused water to drip from your brow "
+"as you wretched onto the ground in front of you. Even when your body would give no more "
+"tiny bits of blood came forth. Your thirst was great. But you were too weak to sit yourself "
+"up let alone leave to find water."]               
                ]
 
 
