@@ -238,14 +238,14 @@ The_Sorrow = [["As the water soaked your clothing, the great stillness and peace
 "numb. Wading had become difficult."]
 	           ]
 
-Tree_Disease = ["The aching began in your feet. As if the bones were straining "
+Tree_Disease = [["The aching began in your feet. As if the bones were straining "
 "to burst. No injury could account for the sudden and quickly increasing pain. You "
 "looked behind you to see if perhaps you had unwittingly stepped on a trap or into "
 "a crevice. There you saw across the path the root of an Eating Tree. You had crushed "
 "it underfoot without even noticing. Yellow-green spores still danced in the sunlight "
 "behind you. "],
-               [-10, "The ache spread like wild-fire; up your legs and into your hips. Fever "
-"lit your brow. You'd begun to sweat by the time the aching touched your chest. Each "
+               [-10, "The ache spread like wild-fire; up your legs and into your hips. "
+"Fever lit your brow. You'd begun to sweat by the time the aching touched your chest. Each "
 "breath wrung a weak cry from you. You could stand no longer. The wet tangle of leaves "
 "and mud beneath you made a sickening sucking sound as your back hit the forest floor. "],
                [-15, "A cold sweat came on. You began to shiver. Ahead of you, leaning "
@@ -382,10 +382,46 @@ Desert_Scholar = [
              ["""3"""]
              ]
 Meadow_Mystic = [
-         ["""1"""],
-         ["""2"""],
-         ["""3"""]
-         ]
+                ["Hello Traveler. Please, come in. What can I do for you? "],
+                [2, 10, "Elixer of Minor Healing"],
+                [2, 20, "Elixer of Major Healing"],
+                [2, 10, "Elixer of Minor Protection"],
+                [2, 20, "Elixer of Major Protection"],
+                [1, 40, "Oil of Retrieve Memories"],
+                [1, 35, "Oil of Foresight"],
+                ["I thank you for making your way to me, for you purchase I'd "
+                 "like to send you on your way with this gift. It is a token of "
+                 "protection, though a fragile one. Goodbye. "],
+                ["I am sorry that none of my wares took your interest."],
+                ["Is it knowledge you're after? I see. How unusual. Take a seat. "
+                 "What do you wish to know?"],
+                ["There are only two paths to free a soul from The Sorrow. One is "
+                 "wet with blood and what is dark and slippery is treacherous of course "
+                 "the other will require more than brute strength. You weild the sword "
+                 "or try your hand at diplomacy, those are the roads that lead to the "
+                 "sorrow. The first takes bravery, the second cunning; both will require "
+                 "you to be prepared if you wish to be successful. "],
+                ["I know who you are, though I will not speak with you about it. You did "
+                 "no wrongs to me or mine, tis not your way. But I know why you've come "
+                 "and I won't distract you from your path. "],
+                ["Yes, your family survives. It is hard to remain hidden when one you love "
+                 "is so close, you have no idea how hard. But they will not seek you out "
+                 "nor let you find them. "],
+                ["You are asking many questions. Do not let yourself beleive that any "
+                 "curiousity is without reciprocity. You remember naught of the child-times "
+                 "but you remember leaving, yes? Yes, I can see it in your eyes. Even without "
+                 "your memories you know that you would not have undergone such an exit "
+                 "ceremony in a frivolous nature. All those that watched you cut the skin "
+                 "from over your own heart as you sang in the common tongue, the last words "
+                 "as such you'd ever speak, that your heart had left this place, that it belonged "
+                 "to another. Of course you have many questions, the answers will not satisfy "
+                 "you. And they do not belong to you. You forsook knowledge of this place. I "
+                 "wish you well but that is the truth at the end of it. "],
+                 ["I do not have knowledge of that sort. You'll find that most practices of "
+                  "any worth require much study. Focus in one thing leaves other areas "
+                  "undiscovered. You will find your answers elsewhere. "],
+                 ["I wish you luck in your quest. Goodbye. "]   
+                 ]
 #Peacekeeper Dragon
 White_Dragon = [
                ["Before you appeared, or came upon you from the convergence of the lightening-white "
