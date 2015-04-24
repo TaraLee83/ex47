@@ -122,16 +122,24 @@ class Game(object):
         user = raw_input("> ")
         for key in current_dict:
             if key in user:
-                print key
+                value = current_dict[key]
+                if value == 2:
+                    print encounter[current_space][value]
+                    #self.scene(current_space)
+                elif value != 2:
+                    print encounter[current_space][current_dict[key]]
+            #if key in user and current_dict[key] == 2:
+             #   print "back to scene"    
 
+###Is input action or encounter
 
 ### When no attack is rolled            
     def user_input(self, current_space):
     ###Take input, lookup in dict, run changes if key in dict, otherwise print error and recycle.																																																																																																																																																																																																																																																							
         user = raw_input(">  ")
         good_value = 0
-        for key in directory:
-            for subkey in directory[key]:
+        for key in main_directory:
+            for subkey in main_directory[key]:
                 if subkey in user:
                     good_value = 1
                     self.point(subkey, current_space)
@@ -141,22 +149,12 @@ class Game(object):
             self.user_input(current_space)
 		    
     def point(self, subkey, current_space):
-        print "at point", subkey, current_space
-        print encounter_directory[current_space]
         if subkey in direction:
             self.test_move(subkey, current_space)
         elif subkey in action:
             self.action(subkey, current_space)
-        elif subkey in blacksmith and "Blacksmith" in encounter_directory[current_space]:
-            self.passive_encounter(current_space)
-        elif subkey in desert_scholar and "Desert_Scholar" in encounter_directory[current_space]:
-            self.passive_encounter(current_space)
-        elif subkey in herbalist and "Herbalist" in encounter_directory[current_space]:
-            self.passive_encounter(current_space)
-        elif subkey in meadow_mystic and "Meadow_Mystic" in encounter_directory[current_space]:
-            self.passive_encounter(current_space)
-        elif subkey in white_dragon and "White_Dragon" in encounter_directory[current_space]:
-            self.passive_encounter(current_space)    
+        elif subkey in encounter_directory[current_space]:
+            self.passive_encounter(current_space)        
 		 
     def test_move(self, subkey, current_space):
         step = direction[subkey]
@@ -186,4 +184,4 @@ class Game(object):
 current_space = 8
 
 go = Game(current_space)
-go.passive_encounter(current_space)
+go.user_input(current_space)
