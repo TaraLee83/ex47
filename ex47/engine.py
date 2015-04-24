@@ -1,29 +1,9 @@
 import random
 from tile_desc import scene
 from graph import graph, foe_map
-from library import (encounter, Dragons, Hero, Hit_Points, Meadow_Mystic, 
-Scorpian, Spewer, Tree_Disease, Twiggins)
+from library import *
 
 
-###Input Parsing Dictionaries
-direction = {'north': -6, 'east': 1,
-            'south': 6, 'west': -1
-            }		    
-action = {'sleep': +3, 'open bag': 0, 
-	     'sing': +1
-	     }
-###I.P.D. - Passive Encounters  
-blacksmith = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}  
-desert_scholar = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}
-herbalist = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4} 
-meadow_mystic = {'buy': 1, 'oils': 1, 'healing': 1, 'trade': 1, 'poison': 1,
-'information': 4, 'soul shard': 4, 'where': 4, 'how': 4, 'the sorrow': 5,
-'daughter': 5, 'Arturia': 5, 'dragons': 5, 'Dragons': 5, 'I': 6, 'me': 6,
-'family': 7, 'mother': 7, 'father': 7, 'goodbye': 10, 'thank you': 10}
-white_dragon = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}
-
-directory = {0: direction, 1: action, 2: blacksmith, 3: desert_scholar, 
-4: herbalist, 5: meadow_mystic, 6: white_dragon}
 
 class Game(object):
     
@@ -133,9 +113,17 @@ class Game(object):
         print "With your last breath you scream \"Arturia!\" then you breath no more."
         exit(1)     
 
-### When encounter is rolled on passive_encounter square
+### When encounter is rolled on passive_encounter square. Remain in encounter until exit scene is triggered
+###
     def passive_encounter(self, current_space):
-        pass
+        ###print intro scene, pass to input, when exit is triggered return to self.scene(current_space)
+        current_dict = encounter_directory[current_space]
+        print encounter[current_space][0]
+        user = raw_input("> ")
+        for key in current_dict:
+            if key in user:
+                print key
+
 
 ### When no attack is rolled            
     def user_input(self, current_space):
@@ -144,29 +132,31 @@ class Game(object):
         good_value = 0
         for key in directory:
             for subkey in directory[key]:
-	            if subkey in user:
-		            good_value = 1
-		            self.point(subkey, current_space)
-	
-	    if good_value == 0:
-	        print "I'm afraid I didn't understand your command. Please try again."
-	        self.user_input(current_space)
+                if subkey in user:
+                    good_value = 1
+                    self.point(subkey, current_space)
+
+        if good_value == 0:
+            print "I'm afraid I didn't understand your command. Please try again."
+            self.user_input(current_space)
 		    
     def point(self, subkey, current_space):
+        print "at point", subkey, current_space
+        print encounter_directory[current_space]
         if subkey in direction:
             self.test_move(subkey, current_space)
         elif subkey in action:
             self.action(subkey, current_space)
-        elif subkey in blacksmith and blacksmith in encounter[current_space]:
-            pass
-        elif subkey in desert_scholar:
-            pass
-        elif subkey in herbalist:
-            pass
-        elif subkey in meadow_mystic and meadow_mystic in encounter[current_space]:
-            print "booyah"
-        elif subkey in white_dragon:
-            pass    
+        elif subkey in blacksmith and "Blacksmith" in encounter_directory[current_space]:
+            self.passive_encounter(current_space)
+        elif subkey in desert_scholar and "Desert_Scholar" in encounter_directory[current_space]:
+            self.passive_encounter(current_space)
+        elif subkey in herbalist and "Herbalist" in encounter_directory[current_space]:
+            self.passive_encounter(current_space)
+        elif subkey in meadow_mystic and "Meadow_Mystic" in encounter_directory[current_space]:
+            self.passive_encounter(current_space)
+        elif subkey in white_dragon and "White_Dragon" in encounter_directory[current_space]:
+            self.passive_encounter(current_space)    
 		 
     def test_move(self, subkey, current_space):
         step = direction[subkey]
@@ -196,4 +186,4 @@ class Game(object):
 current_space = 8
 
 go = Game(current_space)
-go.scene(current_space)
+go.passive_encounter(current_space)
