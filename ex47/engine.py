@@ -116,26 +116,21 @@ class Game(object):
 ### When encounter is rolled on passive_encounter square. Remain in encounter until exit scene is triggered
 ###
     def passive_encounter(self, current_space):
-        ###print intro scene, pass to input, when exit is triggered return to self.scene(current_space)
+        ###print intro scene, take input until exit scene triggered then pass to self.scene(current_space).
         current_dict = encounter_directory[current_space]
         print encounter[current_space][0]
-        user = raw_input("> ")
-        for key in current_dict:
-            if key in user:
-                value = current_dict[key]
-                if value == 2:
-                    print encounter[current_space][value]
-                    #self.scene(current_space)
-                elif value != 2:
+        value = 1
+        while value != 2:
+            user = raw_input("> ")
+            for key in current_dict:
+                if key in user:
+                    value = current_dict[key]
                     print encounter[current_space][current_dict[key]]
-            #if key in user and current_dict[key] == 2:
-             #   print "back to scene"    
-
-###Is input action or encounter
+        self.scene(current_space)
 
 ### When no attack is rolled            
     def user_input(self, current_space):
-    ###Take input, lookup in dict, run changes if key in dict, otherwise print error and recycle.																																																																																																																																																																																																																																																							
+    ### Take input, if in dict pass to point, if not raise error.																																																																																																																																																																																																																																																							
         user = raw_input(">  ")
         good_value = 0
         for key in main_directory:
@@ -149,6 +144,7 @@ class Game(object):
             self.user_input(current_space)
 		    
     def point(self, subkey, current_space):
+    ### Find which dictionary input key exists in, pass to related method.    
         if subkey in direction:
             self.test_move(subkey, current_space)
         elif subkey in action:
@@ -184,4 +180,4 @@ class Game(object):
 current_space = 8
 
 go = Game(current_space)
-go.user_input(current_space)
+go.passive_encounter(current_space)
