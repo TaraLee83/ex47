@@ -18,7 +18,7 @@ Book = []
 
 ##########################################Foes##########################################
 
-Dragons = [
+Dragons_Scenes = [
       #Red Dragon
       [["red_dragon"],
       ["The rumbling began beneath your feet. Your eyes traced tremors to the " 
@@ -118,7 +118,7 @@ Dragons = [
       ]
 	  ]]  
 
-Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a phantasmagoria of "
+Memory_Nymphs_Scenes = [["From the mist rising up all around the crashing waterfall a phantasmagoria of "
 "pastels, like a dream of the surrounding landscape danced, the shape closest to spheres now and "
 "parabolic uni-colored rainbows the next, too bold of perriwinkle, or lemon drop, or lime to have "
 "been imagined, yet unnatural. As you thought to look away the movements became more intentional "
@@ -178,7 +178,7 @@ Memory_Nymphs = [["From the mist rising up all around the crashing waterfall a p
 "soul."]
     ]
 
-Scorpian = [["The sand shifts slightly, at first it seems a trick of the intense heat "
+Scorpian_Scenes = [["The sand shifts slightly, at first it seems a trick of the intense heat "
 "then a mass arrises, sand like a shower falls from its form. That being revealed to "
 "be the size of an obese house cat. Quickly though, legs like sharp sticks reveal "
 "themselves. Last, it lifts its head. Its buldging eyes squint at you a moment before "
@@ -194,7 +194,7 @@ Scorpian = [["The sand shifts slightly, at first it seems a trick of the intense
 "as it shook its head side to side to drive the pincer points deeper into your skin. "]
             ]
 
-Spewer = [["A sqwauk pierced the air, an unfortunate looking creature entered your "
+Spewer_Scenes = [["A sqwauk pierced the air, an unfortunate looking creature entered your "
 "air space. It seemed to be in the midst of a belching fit. Each gassy eruption caused the "
 "dirt-brown bird to spit up a toxic looking yellow wad that fell onto whatever happened to "
 "be below it. Leaves and earth sizzled under the yellow spit. It looked to be flying in "
@@ -206,7 +206,7 @@ Spewer = [["A sqwauk pierced the air, an unfortunate looking creature entered yo
 "yellow blob down, where it burns a hole in the shoulder of your shirt."]
          ]
 
-The_Sorrow = [["As the water soaked your clothing, the great stillness and peace of it seemed "
+The_Sorrow_Scenes = [["As the water soaked your clothing, the great stillness and peace of it seemed "
 "to seep into your skin. You felt calm. But as worries left your mind so to did need, anger "
 "all of it, every element of the fire within drowned. You wondered if you too were a fire "
 "to be put out."],
@@ -238,7 +238,7 @@ The_Sorrow = [["As the water soaked your clothing, the great stillness and peace
 "numb. Wading had become difficult."]
 	           ]
 
-Tree_Disease = [["The aching began in your feet. As if the bones were straining "
+Tree_Disease_Scenes = [["The aching began in your feet. As if the bones were straining "
 "to burst. No injury could account for the sudden and quickly increasing pain. You "
 "looked behind you to see if perhaps you had unwittingly stepped on a trap or into "
 "a crevice. There you saw across the path the root of an Eating Tree. You had crushed "
@@ -263,7 +263,7 @@ Tree_Disease = [["The aching began in your feet. As if the bones were straining 
                ]
 
 
-Twiggins = [
+Twiggins_Scenes = [
            ["A distinctive and offputting sound brought your "
 "eyes to a creature best described as a thumb-sized twig come-alive. Four wings, "
 "flat to the sky, offset from each other; top at the right, second lower-left, third "
@@ -292,7 +292,7 @@ Twiggins = [
 	        ]], [["twiggin_swarm"], ["""Swarm before"""], ["""Swarm after"""], ["swarm three"]
 	        ]
 
-Twiggin_Swarm = [["You have stumbled into an active twiggin nest. An upright cylinder, about "
+Twiggin_Swarm_Scenes = [["You have stumbled into an active twiggin nest. An upright cylinder, about "
 "three feet tall. It is made up mostly of brush; sticks, leaves and long grasses. The hollow "
 "structure is striped horizontally by a white gummy substance. The whole thing smells like "
 "a mixture of the most acrid of lemons and diesel exhaust. The pungeant fumes forced bile to "
@@ -325,13 +325,13 @@ Twiggin_Swarm = [["You have stumbled into an active twiggin nest. An upright cyl
 
 ##########################################Friends##########################################
 
-Blacksmith = [
+Blacksmith_Scenes = [
           ["Intro dialogue containing clue about polearm"],
           ["Blacksmith gives hero polearm"],
           ["Blacksmith tell hero how to use it, page is added to book."]
           ]
 
-Herbalist = [
+Herbalist_Scenes = [
             ["The distinct smell and orange brown glow of cypress welcomed you as you "
 "stepped inside the fragrant shop. The wood had needed harvesting from the southern gulf, "
 "those oft-swamped marshes that prevented a southernmost trail between Garzhed forest and "
@@ -352,7 +352,7 @@ Herbalist = [
 "Major Healing Draught 20 "
 "Protect The Past 20"
             ]]
-Desert_Scholar = [
+Desert_Scholar_Scenes = [
              ["""Tests hero's mettle. """],
              ["""Tells true history of humans and dragons. Add page to book
 	      Dragons did not ask for the terrible task of gaurding the souls.
@@ -381,17 +381,21 @@ Desert_Scholar = [
 	      """],
              ["""3"""]
              ]
-Meadow_Mystic = [
+Meadow_Mystic_Scenes = [
                 ["Hello Traveler. Please, come in. What can I do for you? "],
-                [2, 10, "Elixer of Minor Healing"],
-                [2, 20, "Elixer of Major Healing"],
-                [2, 10, "Elixer of Minor Protection"],
-                [2, 20, "Elixer of Major Protection"],
-                [1, 40, "Oil of Retrieve Memories"],
-                [1, 35, "Oil of Foresight"],
-                ["I thank you for making your way to me, for you purchase I'd "
-                 "like to send you on your way with this gift. It is a token of "
-                 "protection, though a fragile one. Goodbye. "],
+                ["Come take a look at my inventory. You should find what "
+                "you're looking for here."
+                "Item                    Quantity   Price"
+                "Elixer of Minor Healing       2       10"
+                "Elixer of Major Healing       2       20"
+                "Elixer of Minor Protection    2       10"
+                "Elixer of Major Protection    2       20"
+                "Oil of Retrieve Memories      1       35"
+                "Oil of Foresight              1       35"],
+                ["I thank you for making your way to me. To thank you for your "
+                "purchase I'd like to send you on your way with this gift. It "
+                "is a token of protection, though a fragile one. To use your "
+                "item simply type its name. Goodbye. "],
                 ["I am sorry that none of my wares took your interest."],
                 ["Is it knowledge you're after? I see. How unusual. Take a seat. "
                  "What do you wish to know?"],
@@ -423,7 +427,7 @@ Meadow_Mystic = [
                  ["I wish you luck in your quest. Goodbye. "]   
                  ]
 #Peacekeeper Dragon
-White_Dragon = [
+White_Dragon_Scenes = [
                ["Before you appeared, or came upon you from the convergence of the lightening-white "
 "clouds and the mist hanging over the lake, a Dragon, the likes of which had never before been "
 "seen. Almost as long as the mountain was tall and a third as wide. The whole of the land, the deep "
@@ -435,7 +439,7 @@ White_Dragon = [
 "her in, the creature who responded to your prayer you saw in your reflection your love for Arturia. "
 "It made your wounds minor nuisance, it made your fear for your own life a thought you may live to "
 "consider when she was safe and breathing once more, when she was back in your world. No, in her "
-"world. Gods let my love be enough. "               ],
+"world. Gods let my love be enough. "],
                ["The White Dragon did not startle. She stared, without blinking, at you. there was no "
 "weapon or sorcery so black that it could stain this white thing red. It seemed an eternity had passed "
 "before she dipped her muzzle and spoke, \"I am greatly dissapointed in you youngling. Your actions "
@@ -457,6 +461,41 @@ White_Dragon = [
 "you have survived. Never has an Everless risen that had not been forged in the fires of the wilds.\" "
 "Your daughter, young Everless."               ]
                ]
+##########################################Encounter Dictionary##########################################
+encounter = {1: Twiggins_Scenes,
+             2: Twiggins_Scenes,
+             4: Dragons_Scenes,
+             5: The_Sorrow_Scenes,
+             6: Dragons_Scenes,
+             7: Twiggins_Scenes,
+             8: Meadow_Mystic_Scenes,
+             10: Dragons_Scenes,
+             11: The_Sorrow_Scenes,
+             12: Dragons_Scenes,
+             13: Twiggins_Scenes,
+             14: Twiggins_Scenes,
+             16: Dragons_Scenes,
+             17: Dragons_Scenes,
+             18: Dragons_Scenes,
+             19: Scorpian_Scenes,
+             20: Spewer_Scenes,
+             21: Spewer_Scenes,
+             22: Memory_Nymphs_Scenes,
+             23: Memory_Nymphs_Scenes,
+             24: Memory_Nymphs_Scenes,
+             25: Desert_Scholar_Scenes,
+             26: Spewer_Scenes,
+             27: Spewer_Scenes,
+             28: Tree_Disease_Scenes,
+             29: Herbalist_Scenes,
+             30: Blacksmith_Scenes,
+             31: Scorpian_Scenes,
+             32: Scorpian_Scenes,
+             33: Scorpian_Scenes,
+             34: Tree_Disease_Scenes,
+             35: Tree_Disease_Scenes,
+             36: Tree_Disease_Scenes
+             }               
 ##########################################Hero_Attacks##########################################
 Hero = {-5: 'punch'}               
 ##########################################Hitpoints##########################################
@@ -464,42 +503,30 @@ Hit_Points = {"Hero": 65, "Dragons":{"red_dragon":80, "green_dragon":70, "gold_d
 Fairy = [30]
 Histears = [65] 
 Twiggin = [10]
-##########################################Encounters##########################################
-encounter = {1: Twiggins,
-             2: Twiggins,
-	           3: 'Tile_Change',
-             4: Dragons,
-             5: 'The_Sorrow',
-             6: Dragons,
-             7: Twiggins,
-             8: Meadow_Mystic,
-             9: 'Tile_Change',
-             10: Dragons,
-             11: 'The_Sorrow',
-             12: Dragons,
-             13: Twiggins,
-             14: Twiggins,
-             15: 'Tile_Change',
-             16: Dragons,
-             17: Dragons,
-             18: Dragons,
-             19: Scorpian,
-             20: Spewer,
-             21: Spewer,
-             22: 'Memory_Nymphs',
-             23: 'Memory_Nymphs',
-             24: 'Memory_Nymphs',
-             25: Desert_Scholar,
-             26: Spewer,
-             27: Spewer,
-             28: Tree_Disease,
-             29: 'Herbalist',
-             30: 'Blacksmith',
-             31: Scorpian,
-             32: Scorpian,
-             33: Scorpian,
-             34: Tree_Disease,
-             35: Tree_Disease,
-             36: Tree_Disease
-	    }
 
+##########################################Encounters Input Dictionaries########################################## 
+Blacksmith_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}  
+Desert_Scholar_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}
+Herbalist_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4} 
+Meadow_Mystic_Inp = {'buy': 1, 'oils': 1, 'healing': 1, 'trade': 1, 'poison': 1,
+'information': 4, 'soul shard': 4, 'where': 4, 'how': 4, 'the sorrow': 5,
+'daughter': 5, 'Arturia': 5, 'dragons': 5, 'Dragons': 5, 'I': 6, 'me': 6,
+'family': 7, 'mother': 7, 'father': 7, 'goodbye': 10, 'thank you': 10}
+White_Dragon_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}
+
+encounter_directory = {
+                       8: Meadow_Mystic_Inp,
+                      25: Desert_Scholar_Inp,
+                      29: Herbalist_Inp,
+                      30: Blacksmith_Inp
+                      }      
+
+          
+##########################################Action Input Dictionaries##########################################
+direction = {'north': -6, 'east': 1,
+            'south': 6, 'west': -1
+            }       
+action = {'sleep': +3, 'open bag': 0, 
+       'sing': +1
+       }
+directory = {0: direction, 1: action}       
