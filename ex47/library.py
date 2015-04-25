@@ -345,13 +345,22 @@ Herbalist_Scenes = [
 "indescribable pieces together, spoke to you without looking up from his work. \"Welcome. "
 "My council is free with purchase of my goods. If nothing ails you today, look ahead. No "
 "soul walks free of needing for long."],
-            ["\"Here is my price list, please tell me what you would like\""
-"Draught of Internal Compass 15" 
-"Iron Armor 20"            
-"Minor Healing Draught 10 "
-"Major Healing Draught 20 "
-"Protect The Past 20"
-            ]]
+            ["Here is my price list, please tell me what you would like"
+             "Item                    Quantity   Price"
+             "Health Augment                 3      15"
+             "Minor Healing Draught          3      10 "],
+            ["Thank you for your business. Go with good health. "],
+            ["It depends on what type of weapon you're looking for. If you're in need of "
+"something for personal protection the Desert Scholar may be your best bet. If you intend "
+"to slay a beast much greater in size than yourself then you should see the blacksmith in "
+"town here. Though it isn't cheap. A lot of metal goes into larger weapons and theres not "
+"an easy job to be had about here. "],
+            ["The Soul Shards are in the North, in the Dragonlands. If you go looking for "
+"them you're unlikely to return."],
+            ["I'm afraid I'm not a good source for information of the worldly sort as my "
+"work sets me indoors, laboring well into the evening and there's not much talk that "
+"happens in this shop. "] 
+             ]
 Desert_Scholar_Scenes = [
              ["Are you lost? You may drink as much water as you like. Then "
 "you should be getting on your way. I have much to do. "],
@@ -529,7 +538,8 @@ Desert_Scholar_Inp = {'hello': 0, 'buy': 1, 'weapons': 1, 'goods': 1,
 'goodbye': 2, 'thanks': 2, 'soul shards':3, 'souls': 3, 'Dragons': 3,
 'history': 3, 'white dragons': 4, 'White Dragons': 4, 'peace': 4,
 'shards': 5, 'outside': 5, 'safe': 5, 'you': 6}
-Herbalist_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4} 
+Herbalist_Inp = {'buy': 1, 'goods': 1, 'healing': 1, 'goodbye': 2, 'thanks': 2, 'weapon': 3,
+'protection': 3, 'blacksmith': 3, 'weapons': 3, 'sould shards': 4, 'daughter': 4} 
 Meadow_Mystic_Inp = {'hello': 0, 'buy': 1, 'oils': 1, 'healing': 1, 'trade': 1, 'poison': 1,
 'goodbye': 2, 'thanks': 2, 'information': 4, 'soul shard': 4, 'where': 4, 'how': 4, 'the sorrow': 5,
 'daughter': 5, 'Arturia': 5, 'dragons': 5, 'Dragons': 5, 'I': 6, 'me': 6,
