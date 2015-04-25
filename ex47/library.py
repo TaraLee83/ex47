@@ -353,33 +353,52 @@ Herbalist_Scenes = [
 "Protect The Past 20"
             ]]
 Desert_Scholar_Scenes = [
-             ["""Tests hero's mettle. """],
-             ["""Tells true history of humans and dragons. Add page to book
-	      Dragons did not ask for the terrible task of gaurding the souls.
-	      They knew that ungaurded, those souls and the riches they created,
-	      both in crude gold and in their combined ability to separate and
-	      protect a realm from the rest of existence, would soon attract dark
-	      forces. Greed and the lust for realms to press beneath ones thumb
-	      would draw the simple minded and many a creature of tyrannical 
-	      nature, even some of their own. It was the weakest, the alliance
-	      of gold dragons who brought the need to the Green dragons, who in
-	      the 7th century of the current age ruled proudly. It is undoubtedly
-	      because of this pride that they called for immediate relocation, they
-	      themselves moved from the caverns of the forest, to the cold and
-	      unwelcoming territory now called Dragonlands. When, in the next 
-	      century, the alliance of The Red rose to overwhelm the the alliance
-	      of The Green; in the bloody and savage manner that Dragons have;
-	      they took the protectors mantle as their own. This ensured that 
-	      no human would oppose the new powers and that they longstanding peace
-	      between would remain, as their own interests were still kept. It
-	      allowed The Green, having more pride than sense, to succede before
-	      their numbers had dwindled to the post coup numbers of the fallen 
-	      of the old age. Peace among their own was of great interest to The
-	      Red, they did afterall seek to rule all. And more was a much more
-	      attractive all than less.
-	          The White are ever the workers of the shards. 
-	      """],
-             ["""3"""]
+             ["Are you lost? You may drink as much water as you like. Then "
+"you should be getting on your way. I have much to do. "],
+             ["That which I have crafted has taken much time as I am a studious man. "
+              "Item                    Quantity   Price" 
+              "Catchers hat                   1      30"
+              "Dagger                         2      15"],
+             ["Farewell. May you choose the path of peace, for the sake of "
+"all. "]
+             ["Dragons did not ask for the terrible task of gaurding the souls. "
+"They knew that ungaurded, those souls and the riches they created, both in "
+"crude gold and in their combined ability to separate and protect a realm from "
+"the rest of existence, would soon attract dark forces. Greed and the lust for "
+"realms to press beneath ones thumb would draw the simple minded and many a "
+"creature of tyrannical nature, even some of their own. It was the weakest, the "
+"alliance of gold dragons who brought the need to the Green dragons, who in the "
+"7th century of the current age ruled proudly. It is undoubtedly because of this "
+"pride that they called for immediate relocation, they themselves moved from the "
+"caverns of the forest, to the cold and unwelcoming territory now called "
+"Dragonlands. When, in the next century, the alliance of The Red rose to "
+"overwhelm the the alliance of The Green; in the bloody and savage manner that "
+"Dragons have; they took the protectors mantle as their own. This ensured that no "
+"human would oppose the new powers and that they longstanding peace between would "
+"remain, as their own interests were still kept. It allowed The Green, having more "
+"pride than sense, to succede before their numbers had dwindled to the post coup "
+"numbers of the fallen of the old age. Peace among their own was of great interest "
+"to The Red, they did afterall seek to rule all. And more was a much more "
+"attractive all than less."],
+             ["For one who knows nothing of them, they all seem alike enough. "
+"there are three races that war, The Red, The Green and The Gold. The White do "
+"no such thing. They seem unfettered by the bloody habits of every other living "
+"creature. Except to eat, and they drink the birds of the sky at that, you'll see "
+"no harm done in their presence. "],
+             ["A friend helped me forge the defenses you saw 'round the hut. It "
+"easy enough for me to make passage into my home impossible. That suits more than "
+"just me, you understand? My work is of great importance to a great many souls in "
+"our time and forward. It wouldn't do to have me killed off by some simple thug "
+"or spiteful creature."],
+             ["To some, I am the Dragonkinds historian. Giving detailed accounts "
+"of thier culture and ways of life, so they remain undisturbed and understood. "
+"To others, I am a chronicler of the story that unfolds between Human and Dragon "
+"within our lands so that mistakes need not be repeated. I am called upon for "
+"council to grievances from both sides and well I quell both usually. Never to the "
+"knowledge of our seers, who see so many worlds that they can little comprehend a "
+"single one, has a world with two intelligent and powerful creatures supported both. "
+"Compassion was born into the heart of both these great species and that is my true "
+"job. In the service of compassion, I do what is required of me to retain balance. "]
              ]
 Meadow_Mystic_Scenes = [
                 ["Hello Traveler. Please, come in. What can I do for you? "],
@@ -506,12 +525,15 @@ Twiggin = [10]
 
 ##########################################Encounters Input Dictionaries########################################## 
 Blacksmith_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}  
-Desert_Scholar_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}
+Desert_Scholar_Inp = {'hello': 0, 'buy': 1, 'weapons': 1, 'goods': 1,
+'goodbye': 2, 'thanks': 2, 'soul shards':3, 'souls': 3, 'Dragons': 3,
+'history': 3, 'white dragons': 4, 'White Dragons': 4, 'peace': 4,
+'shards': 5, 'outside': 5, 'safe': 5, 'you': 6}
 Herbalist_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4} 
-Meadow_Mystic_Inp = {'buy': 1, 'oils': 1, 'healing': 1, 'trade': 1, 'poison': 1,
-'information': 4, 'soul shard': 4, 'where': 4, 'how': 4, 'the sorrow': 5,
+Meadow_Mystic_Inp = {'hello': 0, 'buy': 1, 'oils': 1, 'healing': 1, 'trade': 1, 'poison': 1,
+'goodbye': 2, 'thanks': 2, 'information': 4, 'soul shard': 4, 'where': 4, 'how': 4, 'the sorrow': 5,
 'daughter': 5, 'Arturia': 5, 'dragons': 5, 'Dragons': 5, 'I': 6, 'me': 6,
-'family': 7, 'mother': 7, 'father': 7, 'goodbye': 10, 'thank you': 10}
+'family': 7, 'mother': 7, 'father': 7}
 White_Dragon_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}
 
 encounter_directory = {
@@ -529,4 +551,5 @@ direction = {'north': -6, 'east': 1,
 action = {'sleep': +3, 'open bag': 0, 
        'sing': +1
        }
-directory = {0: direction, 1: action}       
+main_directory = {0: direction, 1: action, 2:Blacksmith_Inp, 3: Desert_Scholar_Inp, 4: Herbalist_Inp,
+5: Meadow_Mystic_Inp, 6: White_Dragon_Inp}       
