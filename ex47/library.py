@@ -325,11 +325,35 @@ Twiggin_Swarm_Scenes = [["You have stumbled into an active twiggin nest. An upri
 
 ##########################################Friends##########################################
 
-Blacksmith_Scenes = [
-          ["Intro dialogue containing clue about polearm"],
-          ["Blacksmith gives hero polearm"],
-          ["Blacksmith tell hero how to use it, page is added to book."]
-          ]
+Blacksmith_Scenes = [["\"Aye\" The smith set a glowing pole into the water. The water hissed, "
+"steam filled the small shop then filtered out through the open front. \"What kin I do fer yeh?\" "],
+                     ["\"Ye'v seen my rack. Not many a beast can't be taken by pole 'round here. "
+"but. If yer lookin fer somethin' special,\" He waddled to the right side of the shop. A thick "
+"well-oiled leather covered a plain, dark-wood chest. He revealed the contents. \"Prices below\" "
+"he pointed into the chest. Hand scrawled prices sat beneath each item. "
+                      "Item                    Quantity   Price"
+                      "Light Armor                    1      15"
+                      "Heavy Armor                    1      30"
+                      "Mace                           1      25"], 
+                     ["\"I wish you the best of luck. I do.\" He moved back to his work slowly, "
+"as though he were filled with a great many pains, physical and of the spirit, that weighed him "
+"down."],
+                     ["\"Oh good, yes. Polearms are what I specialize in. If your looking to kill "
+"any beast bigger n' yeh, its what yeh want. And yeh don' look the sort to be pickin small fights. "
+"Yer five and seven so yer pole can be no more, it'd throw yeh. Yer strong but with a smaller grip "
+"so we've narrowed it to these two.\" The two polearms he pointed to were exactly your height. You "
+"picked each one up in turn. The first was remarkably good in your hand. Its strenth seemed to flow "
+"into you. As you tossed it up and caught it, it made the air sing as it sliced through it. You set "
+"it down and tried the second. It was heavy, no doubt made very well, but its grip was a swirling, "
+"raised pattern that didn't allow your skin to sit against it quite so snugly. "
+                      "The blacksmith chuckled. \"The first one then. I'd thought it do buts not fer "
+"me ta decide. 65 gold. Yeh have it?"                      
+                     ],
+                     ["\"Don't fret none. There's money teh be found if yeh's in true need as I see "
+"yeh are. Ads are posted in the pass 'tween' forest and meadow lands. Stay way from the Dragon pass "
+"though, or yeh won't remember what yeh was lookin' fer!\" He enjoys a hearty laugh."],
+                     ["Sorry, I don't know what yer gettin' on about."]
+                     ]
 
 Herbalist_Scenes = [
             ["The distinct smell and orange brown glow of cypress welcomed you as you "
@@ -344,7 +368,7 @@ Herbalist_Scenes = [
 "trim beard and small hands going quickly about his work of sewing two dark, furry, mostly "
 "indescribable pieces together, spoke to you without looking up from his work. \"Welcome. "
 "My council is free with purchase of my goods. If nothing ails you today, look ahead. No "
-"soul walks free of needing for long."],
+"soul walks free of needing for long.\""],
             ["Here is my price list, please tell me what you would like"
              "Item                    Quantity   Price"
              "Health Augment                 3      15"
@@ -533,7 +557,8 @@ Histears = [65]
 Twiggin = [10]
 
 ##########################################Encounters Input Dictionaries########################################## 
-Blacksmith_Inp = {'stuff': 1, 'stuff': 2, 'stuff': 3, 'stuff': 4}  
+Blacksmith_Inp = {'hello': 1, 'buy': 1, 'thanks': 2, 'goodbye': 2, 'polearm': 3, 'kill dragon': 3,
+'kill Dragon': 3, 'rack': 3, 'display': 3}  
 Desert_Scholar_Inp = {'hello': 0, 'buy': 1, 'weapons': 1, 'goods': 1,
 'goodbye': 2, 'thanks': 2, 'soul shards':3, 'souls': 3, 'Dragons': 3,
 'history': 3, 'white dragons': 4, 'White Dragons': 4, 'peace': 4,
