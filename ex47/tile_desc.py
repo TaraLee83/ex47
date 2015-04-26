@@ -37,7 +37,13 @@ scene = {1: "The meadow breaks and drops to North and West, ringed and "
 "plaster has fallen away in places to reveal cerulean blue brick. "
 "Ivy covers the back wall. Through the window you hear humming. The "
 "tune sounds faintly familiar. "         ,
-         8: "Meadow Mystic",
+         8: "The inside of her home is open and airy. Sunlight pours "
+"through the windows. Vines hang outside the windows, heavy with bloom, "
+"the rich sugar and lemon scent of which had soaked into the the faded "
+"brown rough-spun wool covered seats and bed. In the back right corner "
+"a black kettle half the size of a horse sat on an iron stand in the "
+"open stove. The Stove itself comprised the corner where that joined the "
+"Western and Northern walls. All of the shimmering black cliff rock that "         ,
          9: 'meadow desc',
          10: """The Western summits flank your left. The wise and the 
 	     greedy both know to keep ones eyes trained on this sight.
@@ -76,7 +82,10 @@ scene = {1: "The meadow breaks and drops to North and West, ringed and "
 	     There is a madness here as alive with intent as a snake 
 	     beneath the water.
 	     """,
-         12: 'dragonlands desc',
+         12: "The Spine, a crooked and twisted ridge that took slow "
+"descent from the volcano down to the Eastern point of Estill, the "
+""         
+""        ,
          13: 'meadow desc',
          14: 'meadow desc',
          15: 'meadow desc',
@@ -108,7 +117,11 @@ scene = {1: "The meadow breaks and drops to North and West, ringed and "
          28: """You arrive atop a rocky outlook that provides
          a fine view in every direction.""",
          29: 'entrance to Garzhed',
-         30: 'Two possible encounters, a healer and the blacksmith',
+         30: "The stone trough lay on your left. Obscuring the view of the work "
+"area in the back, a rack of finished polearms hung, awaiting purchase. From beyond came "
+"the tinny but deafening thunder of metal striking hot metal. In the near-dark the sparks "
+"betrayed the blacksmiths work table. The heat near the display rack became quite uncomfortable. "
+"you guessed that he met customers in the front section of the shop. ",
          31: """Hills of green and mustard-yellow glass-shards
 	     stretched from the North-West, cave riddled rock-face
 	     to the North-East, where they abruptly curved due 
