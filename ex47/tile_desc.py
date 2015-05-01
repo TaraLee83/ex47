@@ -7,25 +7,22 @@ scene = {1: "The meadow breaks and drops to North and West, ringed and "
 "in ripples that make the North-West meadow seem a sea of its own.",
          2: "Clouds seldom trouble the skies so near to the meadows "
 "farthest edge. Hundreds of feet above the crashing sea, this stretch of "
-"land"         ,
+"land is clear of trees and home to crab grass and wild rose bushes."         ,
          3: "A fog hangs over the line of foothills that run from North "
 "to South. Prairie grass and wildflowers give way to thickening brush "
 "and a scattering of willows with arms outreached. "         ,
-         4: """The Western range of summits, passable, unlike
-	    it's Eastern echo, stretched from Southwest to 
-	    Northwest. It ended at the point between the Eastern and
-	    Western summits known as The Dragons Smile. The Smile:
-	    three crooked lines of jagged rock outcropping that
-	    the cruel and ceaseless winds had filed into spear-like
-	    points. If the warm blue sky brought hope to this place,
-	    The Smile tore it apart and consumed it with delight.
-	    """,
-         5: """The narrow lakeshore crouches between The Dragons
-	    Smile and Gold Pool. From this close you are able to
-	    see a dozen round openings in the three rows of jagged
-	    rock. The caves were crudley smashed into the rockface.
-	    Their entrances are all obscured by fires black.
-	        """,
+         4: "The Western range of summits, passable, unlike it's Eastern "
+"echo, stretched from Southwest to Northwest. It ended at the point "
+"between the Eastern and Western summits known as The Dragons Smile. The "
+"Smile: three crooked lines of jagged rock outcropping that the cruel "
+"and ceaseless winds had filed into spear-like points. If the warm blue "
+"sky brought hope to this place, The Smile tore it apart and consumed it "
+"with delight.",
+         5: "The waters of The Sorrow were icy as befitting its surroundings. "
+"To the North, a dozen round openings in the three rows of jagged rock. The "
+"caves had been crudley smashed into the rockface. Their entrances are all "
+"obscured by char.To the East rose the volcano, A Vumu. To the South, water "
+"trickled through the Soul Shards.",
          6: "A towering volcano churns. Spewing acidic fog out over "
 "itself. Twisted, grey trees spot the middle of the volcano and the "
 "base is thick with thorned brush and alive with the hissing of the "
@@ -44,29 +41,29 @@ scene = {1: "The meadow breaks and drops to North and West, ringed and "
 "a black kettle half the size of a horse sat on an iron stand in the "
 "open stove. The Stove itself comprised the corner where that joined the "
 "Western and Northern walls. All of the shimmering black cliff rock that "         ,
-         9: 'meadow desc',
-         10: """The Western summits flank your left. The wise and the 
-	     greedy both know to keep ones eyes trained on this sight.
-	     Sun browned, speckled with common yellow and blue-bell 
-	     wildflowers and alive at the thicket with birds that 
-	     shook leaf cluster as they hopped from one branch to 
-	     another. Snakes bent the tall dry grasses, toads
-	     and water fowl made wary gutterations as they worked to
-	     silence the clicking, clacking, humming and buzzing of a 
-	     host of insects around them. 
-	        To your right you hear the water of Histears breaking
-	     around the crystal columns that encase the bodies and souls
-	     suspended there. Including Harper. The strikes the crystals
-	     and within, light and energy depose each other with fervor,
-	     as all movement leads to creation so does that between the
-	     sun, the memory of the crystal, the malleability of the water
-	     and the minerals leached from the soil. Thick as syrup, 
-	     a wheaten gold, from beneath the clustered crystals flowed
-	     a liquid that as it traveled from the warm waters near the 
-	     sun drenched Western summits to the vast lake encircled by
-	     the point between the Eastern and Western Summits known
-	     as The Dragons Smile hardened into common gold.
-	     """,
+         9: "A fog hangs over the line of foothills that run from North "
+"to South. Prairie grass and wildflowers give way to thickening brush "
+"and a scattering of willows with arms outreached.",
+         10: "The Western summits flanked your left. Sun browned, "
+"speckled with common yellow and blue-bell wildflowers and alive at "
+"the thicket with birds that shook leaf cluster as they hopped from "
+"one branch to another. Snakes bent the tall dry grasses, toads and "
+"water fowl made wary gutterations as they worked to silence the "
+"clicking, clacking, humming and buzzing of a host of insects around "
+"them. To your right you heard the waters of The Sorrow breaking around "
+"the crystal columns that encased the bodies and souls suspended there. " 
+"Including Arturia. The sun struck the crystals. Within, light and "
+"energy deposed each other fervently. All movement leads to creation. "
+"There was movement in each of these and between them an elegant dance, "
+"The sun, the memory and structure of the crystal, the malleability and "
+"powers of transference of the water and the minerals leached from the "
+"soil. Thick as syrup, a wheaten gold, from beneath the clustered "
+"crystals flowed. Once around the crystals roots to warmer waters and "
+"back down again, backwashed to empty into The Sorrow while the winters "
+"snow pack melted steadily. The waters came to calm within the vast lake, "
+"over its brow the join of Eastern and Western Summits known as The "
+"Dragons Smile. Here in the bottom of The Sorrow that souls honey "
+"hardened into common gold.",
          11: """You stand upon the ice encrusted string of rocks that
 	     make an island of these crystal encased soul shards. The 
 	     brilliance and beauty threatens to overwhelm you. You wish
@@ -86,7 +83,16 @@ scene = {1: "The meadow breaks and drops to North and West, ringed and "
 "descent from the volcano down to the Eastern point of Estill, the "
 ""         
 ""        ,
-         13: 'meadow desc',
+         13: "The Northern sweep of cliffs climbs up out of the waters "
+"shadowing black volcanic rock, sheer and deadly beneath. Grasses become "
+"stubbled, then sparse, then barely a green or brown shoot to be seen, the "
+"further South one peered. East the same slow drying of the land could be "
+"seen as meadow gave way to desert. You could make your way down the West "
+"facing rock-face that led down to the beach, it was a short wall of "
+"natural black rock. But what good is A Meer if she can't take you to "
+"Arturia? That unsettled you. Why had you known the name of this sea? And "
+"what sort of nonsense could fill you with such anger at something as "
+"impartial as the sea itself?",
          14: 'meadow desc',
          15: 'meadow desc',
          16: 'dragonlands desc',
@@ -146,4 +152,3 @@ scene = {1: "The meadow breaks and drops to North and West, ringed and "
 #19 20 21 22 23 24
 #25 26 27 28 29 30
 #31 32 33 34 35 36
-  
