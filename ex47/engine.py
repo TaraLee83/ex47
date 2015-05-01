@@ -1,5 +1,6 @@
 import random
 from tile_desc import scene
+from format_incoming import format_text
 from graph import graph, foe_map
 from library import *
 
@@ -11,7 +12,8 @@ class Game(object):
         self.current_space = current_space
         
     def scene(self, current_space):
-        print scene[int(current_space)]
+        incoming = scene[int(current_space)]
+        print format_text('stuff', incoming)
         self.encounter_roll(current_space)
         
 ### Encounters    
@@ -26,30 +28,24 @@ class Game(object):
         elif x != y:
             self.user_input(current_space)
            
-
 ### When encounter is rolled on hostile square           
-
     def hero_health(self):
         hero_hp = Hit_Points['Hero']
         return hero_hp
 
     def hero_health_change(self, h_change):
-        new = hero_health('self') + h_change
+        new = Hit_Points['Hero'] + h_change
         for key, value in Hit_Points.items():
             Hit_Points["Hero"] = new
             if new <= 0:
-                print """\tYour last breath comes quickly. Your daughter flashes before your eyes.
-            She reaches out to you. You die, leaving her trapped forever.
-            """
+                print "    Your last breath comes quickly. Your daughter flashes before your eyes. "
+                "She reaches out to you. You die, leaving her trapped forever."
                 exit(1)
         return new
  
-
     def foe_health_change(self, current_space, foe, f_change):
-        gen_foe = foe_map[current_space]
-        old_val = Hit_Points[gen_foe][foe]
-        new_val = old_val + f_change
-        Hit_Points[gen_foe][foe] = new_val
+        new_val = Hit_Points[foe] + f_change
+        Hit_Points[foe] = new_val
         return new_val
   
     def choose_attack(self, current_space):
@@ -62,59 +58,60 @@ class Game(object):
     
         if 'hit' in user:
             f_change = -10
-            update_line = "Your foes health is now %s." % foe_health_change('self', current_space, foe, f_change)
+            update_line = "    Your foes health is now %s." % self.foe_health_change(current_space, foe, f_change)
             return update_line
 
         if 'scream' in user:
             return "scream"
         else:
-            not_found = "You're not even sure of what you were trying to do as you floundered to save your skin." 
+            not_found = "    You're not even sure of what you were trying to do as you floundered to save your skin." 
             return not_found   
 
     def attack_engine(self, current_space):
-        val = 0  
-        gen_foe = foe_map[current_space]
-        foe_group = self.choose_attack(current_space)
-        lucky_line = "Luck favors you and the %s attack misses completely." % (str(foe_group[0:1]).strip("[]")).strip("'")
-        lucky = str(foe_group[1:2]), lucky_line
-    
+        val = 0 
+        s_group = encounter[current_space] 
+        scene_group = s_group[1:len(s_group)]
+        scene = random.choice(scene_group) 
+        current_scene = scene[1] 
+        foe = foe_map[current_space]
+        lucky = "    Luck favors you and the %s attack misses completely." % foe    
         ###While hero is alive, while foe is alive, if first time in, if subsequent times in.
-        while self.hero_health() > 0: 
-            foe = (str(foe_group[0:1]).strip("[]")).strip("'")
-        
-            while Hit_Points[gen_foe][foe] > 0:
+        while Hit_Points["Hero"] > 0: 
+            
+            while Hit_Points[foe] > 0:
                 roll = random.randint(0, 4)
-                chosen_attack = random.choice(foe_group[2:5])
+                scene = random.choice(scene_group) 
+                current_scene = scene[1]
 
                 if val == 0:
-                    print str(foe_group[1:2])
+                    incoming = s_group[0][1]
+                    print format_text('stuff', incoming)
                 
                     if roll != 1:
-                        print defense_input('self', current_space, foe)                                                                                                                                                                      
+                        print self.defense_input(current_space, foe)                                                                                                                                                                      
                         val = 1    
                     elif roll == 1:
-                        print lucky, defense_input('self', current_space, foe)
+                        print format_text('stuff', lucky), self.defense_input(current_space, foe)
                         val = 1
 
                 elif val == 1:
 
-                    if roll == 1 and val == 1:
-                        print lucky_line, defense_input('self', current_space, foe)
+                    if roll == 1:
+                        print lucky, self.defense_input(current_space, foe)
                         val = 1
                     elif roll != 1:
-                        h_change = sum(chosen_attack[0:1])
-                        print chosen_attack[1:2], "Your health is now %s." % hero_health_change('self', h_change), defense_input('self', current_space, foe)
+                        h_change = scene[0][0]
+                        print format_text('stuff', current_scene), "Your health is now %s." % self.hero_health_change(h_change), self.defense_input(current_space, foe)
                         val = 1
 
 
-            print "Your foe perishes at your feet. At surviving, you are victorious."
-            #self.scene()
+            print "    Your foe perishes at your feet. At surviving, you are victorious."
+            self.scene(current_space)
+            exit(1)
 
-        print "With your last breath you scream \"Arturia!\" then you breath no more."
+        print "    With your last breath you scream \"Arturia!\" then you breath no more."
         exit(1)     
 
-### When encounter is rolled on passive_encounter square. Remain in encounter until exit scene is triggered
-###
     def passive_encounter(self, current_space):
         ###print intro scene, take input until exit scene triggered then pass to self.scene(current_space).
         current_dict = encounter_directory[current_space]
@@ -177,7 +174,7 @@ class Game(object):
 
 
 	    
-current_space = 8
+current_space = 13
 
 go = Game(current_space)
-go.passive_encounter(current_space)
+go.attack_engine(current_space)
