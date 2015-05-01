@@ -115,14 +115,18 @@ class Game(object):
     def passive_encounter(self, current_space):
         ###print intro scene, take input until exit scene triggered then pass to self.scene(current_space).
         current_dict = encounter_directory[current_space]
-        print encounter[current_space][0]
+        current_scene = encounter[current_space][0]
+        print format_text('stuff', current_scene)
         value = 1
+
         while value != 2:
             user = raw_input("> ")
             for key in current_dict:
                 if key in user:
                     value = current_dict[key]
-                    print encounter[current_space][current_dict[key]]
+                    current_scene = encounter[current_space][current_dict[key]]
+                    print format_text('stuff', current_scene)
+
         self.scene(current_space)
 
 ### When no attack is rolled            
@@ -137,7 +141,7 @@ class Game(object):
                     self.point(subkey, current_space)
 
         if good_value == 0:
-            print "I'm afraid I didn't understand your command. Please try again."
+            print "    I'm afraid I didn't understand your command. Please try again."
             self.user_input(current_space)
 		    
     def point(self, subkey, current_space):
