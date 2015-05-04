@@ -34,14 +34,14 @@ scene = {1: "The meadow breaks and drops to North and West, ringed and "
 "back of a hut-like dwelling. Vines cover the sunburned walls. The "
 "plaster has fallen away in places to reveal cerulean blue brick. "
 "Ivy covers the back wall. Through the window you hear humming. The "
-"tune sounds faintly familiar. "         ,
+"tune sounds faintly familiar. ",
          8: "The inside of her home is open and airy. Sunlight pours "
 "through the windows. Vines hang outside the windows, heavy with bloom, "
 "the rich sugar and lemon scent of which had soaked into the the faded "
 "brown rough-spun wool covered seats and bed. In the back right corner "
 "a black kettle half the size of a horse sat on an iron stand in the "
 "open stove. The Stove itself comprised the corner where that joined the "
-"Western and Northern walls. All of the shimmering black cliff rock that "         ,
+"Western and Northern walls. All of the shimmering black cliff rock that ",
          9: "A fog hangs over the line of foothills that run from North "
 "to South. Prairie grass and wildflowers give way to thickening brush "
 "and a scattering of willows with arms outreached.",
@@ -122,50 +122,73 @@ scene = {1: "The meadow breaks and drops to North and West, ringed and "
 "and air glowed in its washed umber reflection. The brightness of it burned onto your eyes "
 "so that when you looked up to the sky you saw only washed umber. North, more sand. South, "
 "more sand. West, the sea. East, more sand. Sand, sand, sand. "
-         21: 'broken_desert',
-         22: 'forest desc',
-         23: 'forest desc',
-         24: 'forest desc',
-         25: """What had seemed a mirage was now clearly a hut.
-	     It's walls were of roughly crafted glass, clear
-	     and as deep as the length of your arm and therefore
-	     opaque. You made out what could be a table and in
-	     the opposite corner the flicker of a fatted wick.
-	     Though the light indicated a presence nothing 
-	     within looked to be the shape of a . . . wait!
-	     Something had moved ever so slightly. There, hunched
-	     over an oversized table a figure was hard at work
-	     on something. Might they mind an interrupption? 
-	     Might they mind it enough to use whatever fantastic
-	     weapons a so terribly talented glasssmith could 
-	     produce.
-	     """,
-         26: 'broken_desert',
-         27: 'broken_desert',
-         28: """You arrive atop a rocky outlook that provides
-         a fine view in every direction.""",
-         29: 'entrance to Garzhed',
-         30: "The stone trough lay on your left. Obscuring the view of the work "
-"area in the back, a rack of finished polearms hung, awaiting purchase. From beyond came "
-"the tinny but deafening thunder of metal striking hot metal. In the near-dark the sparks "
-"betrayed the blacksmiths work table. The heat near the display rack became quite uncomfortable. "
-"you guessed that he met customers in the front section of the shop. ",
-         31: """Hills of green and mustard-yellow glass-shards
-	     stretched from the North-West, cave riddled rock-face
-	     to the North-East, where they abruptly curved due 
-	     North.
-	     """,
-         32: 'broken_desert',
-         33: 'broken_desert',
-         34: 'landing rock',
-         35: 'forest desc',
-         36: """Over the impenetrable trees to the North you 
-	     noticed many separate plumes of smoke. You heard 
-	     metal striking metal, sawing, and shouting and 
-	     laughing. One winded a lute to the North-east 
-	     and a mistrel sung and strummed to the North-west.
-	     """
-	}   
+         21: "To the North, foothills climbed from the earth and marched off to the "
+"North. Dead-North, bits of grasses spotted the sand. East of here; sand turned to soil, "
+"brush appeared and thickened. And a line of trees spotted the horizon. Everywhere else "
+"was sand. Sand on sand, on sand. ",
+         22: "Here, the sparse pickings of trees began to thicken toward the Southeast. "
+"On the other side of the boulders that marked the bottom of the last hill, The Tears "
+"crashed into cleardrink pool, that fed the waters of the forest. Mist filled the air. ",        
+         23: "You stood before cleardrink. Cool mist thickened the air and painted "
+"rainbows against the sky in every direction. The lively forest, rattled, leaves shook, "
+"birds called out and fallen twigs broke beneath a lesser creatures feet." ,
+         24: "Birds trilled and chirrupped. The sun scarcely reached the "
+"forest floor here. North, the cliff face leading to the Dragon lands. East, the wall "
+"of rock decended from the cliff and curved around to the South."                  
+         25: "What had seemed a mirage was now clearly a hut. It's walls were of "
+"roughly crafted glass, clear and as deep as the length of your arm and therefore "
+"opaque. You made out what could be a table and in the opposite corner the flicker "
+"of a fatted wick. Though the light indicated a presence nothing within looked to "
+"be the shape of a . . . wait! Something had moved ever so slightly. There, hunched "
+"over an oversized table a figure was hard at work on something. Might they mind an "
+"interrupption? Might they mind it enough to use whatever fantastic weapons a so terribly "
+"talented glasssmith could produce?",
+         26: "To the West, Northerly and Southerly, great dark shards of shimmering black "
+"reached into the horizon, jagged at the tips. Directly West lay the path between them. ",
+         27: "Dense forest to the East, the edge of which trails Southeast. Desert South, "
+"North and West.",
+         28: "Surrounded by dense forest, you stood upon an immense boulder. It allowed you "
+"to spy the Western Desert, the Northern Volcano and the Northwest meadows. A well trodden "
+"path led East. The faint sounds of hammering and shouting seemed to come from that direction. ",
+         29: "Felled trees, the height and width of legendary giants, stretched from the natural "
+"outcroppings of boulders that the town sheltered within to an opening, near which had been carved "
+"the towns' name, \"Garzhed\". The path, which wound through dense forest, out in all directions "
+"looked well-used. ",
+         30: "The Marketplace was lively. Barmaids shouted at patrons, shoved boots from bench "
+"tables and delivers frothy mugs. The intoxicated created a clamor. Those on drink sang in small groups in front of "
+"a minstrel near the entrance and a musician near the back curve of the cul-de-sac. Those on vapors "
+"lounged beside the rocky pool, that deliverd The Tears sweet waters to the town or sat, or sat and "
+"and watched the wood-carver create life from felled life, pulling from their pipes, hat brims pulled "
+"forward to block the sunlight that poured into the towns center. Sweet smells from rolls of the bakery, "
+"from candy of the confectionaire, from jams and jellies of the wives at the stalls, mixed with the "
+"deep savory scents of roasting meats of street-side pits and herb encrusted fish blackening on iron ".
+"Less enticing scents met you most of all though. The strong smell of soil that permeats the deep forest "
+"greeted you foremost of course. But the smell of sweat and waste, horse manure and livestock in their "
+"stalls, meat drying slowly in the sun; caked in salt hung strong. Two larger shops stood among the stalls "
+"nearer the entrance, the blacksmith; a stone trough on the left. A rack of finished polearms stood, "
+"center of the shop. It obscured the work area in the back. From whence came the deafening thunder of "
+"metal striking hot metal. In the near-dark of the open front, covered room, the sparks betrayed the "
+"location of the blacksmiths. Further into town, in the curve of the cul-de-sac, the other large shop "
+"was some sort of apothecary. dried herbs hung from the rafters out front. Within, you see someone "
+"working at something behind a wooden counter that stretches the width of the shop. "
+         31: "Hills of green and mustard-yellow glass-shards walled you in. The wall of shards stretched "
+"out in a line to the North. In the West it curved down to the South where it curved again, headed "
+"East.",
+         32: "Shards of glass, twice the height of a house, walled off the South. To the Northwest there "
+"appeared to be a break in the wall of shards. Everywhere else stood unrelenting desert. ",
+         33: "The desert here trails into light woods that become dense not far off. The Southern wall of "
+"shards ends somewhere beyond the treeline to the East. Due North the fade of forest into desert stretches. ",
+         34: "The forest is thick and alive with wood peckers thumping, animals shaking the brush, the creaking "
+"of crickets and the grunting of wild boars. North a boulder can be seen, stretching higher than the horizon. "
+"To the east, the path leads further into the forest. To the South a thick wall of trees blocks further passage. "
+"To the West the path leads from the forest into the woods. ",
+         35: "A well-trodden path led through the forest in three directions. West, North and East. To the "
+"South a dense line of trees blocked the path. ",
+         36: "Over the natural wall of boulders to the North you noticed many separate plumes of smoke. You "
+"heard metal being struck, also, sawing, shouting and laughing; a lute at one end of the wall and song, joined-in "
+"by a bawdry group, from a fair-voiced minstrel; all the bustle of a town. East and South, dense trees form a "
+"barricade. "
+        }   
 
 
 #1  2  3  4  5  6
