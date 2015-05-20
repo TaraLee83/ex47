@@ -1,28 +1,42 @@
-from book import *
 from sys import exit
+from book import *
+from maps import *
+from library import *
+
 ###Bag Functionality
 
 #Add bag triggers gather, use to point meth
-bluebells = "A bell shaped blue flower of light powdery fragrance. "
-cactus_flower = "A white bloom, soft. Reminescent of a lily but with a green bulb beneath "
-" the convergence of the blooms, that covered in wiry hairs."
-book = "words"
+
 ##############################
 
-consumables = [bluebells, cactus_flower]
+bag_contents = {"book": book, dagger: "weapon"}
+#bag_contents = [book]
+bag_description = {"book":{0: "A dusty faded red tome, pungeant with time and forgotten magic."},
+"bluebells":{10: "A bell shaped blue flower of light powdery fragrance."}, 
+"cactus_flower":{10: "A white bloom, soft. Reminescent of a lily but with a green bulb beneath "
+"the convergence of the blooms, that covered in wiry hairs."}, "dagger":{-15: "A knife with a jagged edge." }}
 
-
-specialty = {}
-
+def add_to_bag(self, current_space):
+    if current_space in gather_index:
+        item = gather_index[current_space]
+        bag_contents.append(item)
+        print "You put %s in your bag." % gather_map[current_space]
+        print bag_contents
+    else:
+        print "There is nothing here to take." 
 
 #name added to bag. desc. meth run with item used. item deleted from bag when used
 def bag(self, current_space):
+#Parse input, check if requested item is in bag, return usage from related meth.
+
     u_input = raw_input("What item would you like to use?  ")
     while u_input != "close bag":
         if u_input == "bluebells":
             print health_booster(5)
+        elif u_input == "honeysuckle":
+            print health_booster(5)    
         elif u_input == "cactus flower":
-            print health_booster(7)
+            print health_booster(5)
         elif u_input == "book":
             print book('stuff') 
         else:
@@ -57,8 +71,8 @@ def book(self):
     #def strength_booster(self):
     #   pass
 
-#use_bag_item = {"book": book('self'), "bluebells": health_booster(5), "cactus_flower": health_booster(5)}
-hero_hp = 30
-current_space = 20
 
-go = bag('self', current_space)
+hero_hp = 30
+current_space = 1
+
+go = add_to_bag('self', current_space)
