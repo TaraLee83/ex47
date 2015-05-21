@@ -9,7 +9,7 @@ from library import *
 
 ##############################
 
-bag_contents = {"book": book, dagger: "weapon"}
+bag_contents = [["book"], ["weapons", "dagger", "polearm"], ["medicinals", "salve"]]
 #bag_contents = [book]
 bag_description = {"book":{0: "A dusty faded red tome, pungeant with time and forgotten magic."},
 "bluebells":{10: "A bell shaped blue flower of light powdery fragrance."}, 
@@ -25,10 +25,28 @@ def add_to_bag(self, current_space):
     else:
         print "There is nothing here to take." 
 
+def del_from_bag(self, item):
+#ITEM NEEDS TO PASSED IN AS EITHER 1 OR 2
+    if len(bag_contents[item]) > 1:
+        if item == 2:
+            medicinals = bag_contents[2]
+            medicinals.pop(1)            
+        elif item == 1:    
+            weapons = bag_contents[1]
+            weapons.pop(1)
+
+        print "    Your bag feels a little bit lighter."  
+
+    else:
+        pass
+
+
+              
+
 #name added to bag. desc. meth run with item used. item deleted from bag when used
 def bag(self, current_space):
 #Parse input, check if requested item is in bag, return usage from related meth.
-
+    print
     u_input = raw_input("What item would you like to use?  ")
     while u_input != "close bag":
         if u_input == "bluebells":
@@ -71,8 +89,3 @@ def book(self):
     #def strength_booster(self):
     #   pass
 
-
-hero_hp = 30
-current_space = 1
-
-go = add_to_bag('self', current_space)
