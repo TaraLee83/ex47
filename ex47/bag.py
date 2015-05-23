@@ -1,7 +1,9 @@
+import random
 from sys import exit
 from book import *
 from maps import *
-from library import *
+from scenes import *
+from items import *
 
 ###Bag Functionality
 
@@ -9,7 +11,7 @@ from library import *
 
 ##############################
 
-bag_contents = [["book"], ["weapons", "dagger", "polearm"], ["medicinals", "salve"]]
+bag_contents = [["book"], ["weapons", "dagger", "polearm"], ["medicinals", "salve"], ["gold", 10]]
 #bag_contents = [book]
 bag_description = {"book":{0: "A dusty faded red tome, pungeant with time and forgotten magic."},
 "bluebells":{10: "A bell shaped blue flower of light powdery fragrance."}, 
@@ -17,11 +19,24 @@ bag_description = {"book":{0: "A dusty faded red tome, pungeant with time and fo
 "the convergence of the blooms, that covered in wiry hairs."}, "dagger":{-15: "A knife with a jagged edge." }}
 
 def add_to_bag(self, current_space):
-    if current_space in gather_index:
-        item = gather_index[current_space]
-        bag_contents.append(item)
-        print "You put %s in your bag." % gather_map[current_space]
-        print bag_contents
+    #For all items put into bag except gold recieved as payment
+    if current_space in gather_map:
+        item = gather_map[current_space]
+        category = item_index[item]
+        if category == "medicinals":
+            medicinals = bag_contents[2]
+            medicinals.append(item)
+            print bag_contents
+        elif category == "weapons":
+            weapons = bag_contents[1]
+            weapons.append(item) 
+        elif category == "gold":
+            bag_contents[3][1] = bag_contents[3][1] + random.randint(0, 25)
+            print "    You now have %r gold in your bag." % bag_contents[3][1]
+
+        #bag_contents.append(item)
+        #print "You put %s in your bag." % gather_map[current_space]
+        #print bag_contents
     else:
         print "There is nothing here to take." 
 
@@ -86,6 +101,4 @@ def book(self):
     else:
         print "     You turn the last page over and close the book"
 
-    #def strength_booster(self):
-    #   pass
-
+go = add_to_bag("self", 4)
