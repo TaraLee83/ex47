@@ -2,8 +2,11 @@ import random
 from sys import exit
 from tile_desc import scene
 from format_incoming import format_text
+from input_parsing import *
 from maps import graph, foe_map, tile_loc, gather_map
-from library import *
+from scenes import *
+from bag import *
+
 
 
 
@@ -15,30 +18,34 @@ class Game(object):
     def scene(self, current_space):
         incoming = scene[int(current_space)]
         print format_text('stuff', incoming)
-        ###Just for writing/testing tile desc
         self.encounter_roll(current_space)
-        #self.user_input(current_space)
         
 ### Encounters    
 #MAKE SURE 23 IS ROLLING
     def encounter_roll(self, current_space):
-        p_e_list = (3, 5, 8, 11, 25, 29, 30)
+        p_e_list = (5, 8, 11, 15, 25, 29, 30)
+        poison_list = (20, 21, 26, 27, 28, 35, 35, 36)
         x = random.randint(1, 5) 
         y = 4
-        if current_space == 22 or current_space == 24:
-            print current_space
+        if current_space in p_e_list:
+            self.passive_encounter(current_space)
+        elif x == y and current_space in poison_list:
+            self.poison_encounter(current_space) 
+        elif x != y and current_space in poison_list:
+            self.user_input(current_space)      
+        elif x == y and 3 == current_space or 14 == current_space:
+            #Tile Change
+            current_space = random.randint(1, 36)
+            self.scene(current_space)    
+        elif current_space == 22 or current_space == 24:
             self.user_input(current_space)
         elif x == y and current_space == 23:
-            self.memory_nymph(current_space)    
-        elif x == y and current_space not in p_e_list:
-            print 2
-            self.attack_engine(current_space)
-        elif x == y and current_space in p_e_list:
-            print 3
-            self.passive_encounter(current_space)   
+            self.memory_nymph(current_space) 
+        elif x != y and current_space == 23:
+            self.user_input(current_space)       
         else:
-            print 4
-            self.user_input(current_space)
+            self.attack_engine(current_space) 
+       
            
 ### When encounter is rolled on hostile square           
     def hero_health(self):
@@ -66,12 +73,18 @@ class Game(object):
         return foe_group          
 
     def defense_input(self, current_space, foe):
+        #CHECK FOR WEAPON BONUS, AUTO USE WEAPON/ INSTRUCTIONS FOR USE
         user = raw_input("> ")    
     
         if 'hit' in user:
             f_change = hero_strength[0]
             update_line = "    Your foes health is now %s." % self.foe_health_change(current_space, foe, f_change)
             return update_line
+        elif foe == "Tree_Disease" or foe == "Spewer" and "drink" in user:
+            if "poison_cure" in bag_contents[2]:
+                qt = bag_contents[2].count("poison_cure")
+
+                
 
         if 'scream' in user:
             return "scream"
@@ -128,7 +141,7 @@ class Game(object):
         ###print intro scene, take input until exit scene triggered then pass to self.scene(current_space).
         current_dict = encounter_directory[current_space]
         current_scene = encounter[current_space][0]
-        print format_text('stuff', current_scene)
+        print format_text('self', current_scene)
         value = 1
 
         while value != 2:
@@ -137,46 +150,36 @@ class Game(object):
                 if key in user:
                     value = current_dict[key]
                     current_scene = encounter[current_space][current_dict[key]]
-                    print format_text('stuff', current_scene)
+                    print format_text('self', current_scene)
 
         self.scene(current_space)
-    
+
+    def poison_encounter(self, current_space):
+        scene_set = encounter[current_space]
+        intro, scene = scene_set[0][0], scene_set[random.randint(1, (len(scene_set) -1))][1]
+        print format_text('self', intro)
+        print format_text('self', scene)
+   
     def memory_nymph(self, current_space):
         format_text('self', Memory_Nymphs_Scenes[0][0])
         scenes = Memory_Nymphs_Scenes[1], Memory_Nymphs_Scenes[2]
         scene = random.choice(scenes)
-        goody = scene[1]
+        item = scene[1]
         user_input = raw_input("> ")
         if "sit" in user_input or "yes" in user_input or "talk" in user_input:
-            print scene[2]
-            print self.del_goodies(goody)
-            print bag_contents            
+            print format_text("self", scene[2])
+            print del_from_bag("stuff", item)
+            self.user_input(current_space)            
         elif "run" in user_input or "no" in user_input or "walk away" in user_input:
             print "    You put some distance between yourself and the mysterious creature. "
+            #Move player one space to the left.
             current_space = 22
             self.scene(current_space)
         else:
             print "    You can tell that the creature doesn't understand you but it continues anyway." 
-            print scene[2]  
-            print self.del_goodies(goody)
-            print bag_contents
-
-    def del_goodies(self, goody):
-        #Type is either weapons or strength bonuses
-        if goody == "strength_bonus":
-            if hero_strength < -10:
-                hero_strength[0] = -10
-                return "    You are not feeling quite as strong as you were a moment ago."
-            else:
-                pass    
-        elif goody == "weapon":    
-            del bag_contents("weapon") 
-            return "    Your bag feels considerably lighter." 
-        else:
-            pass      
-
-
-
+            print format_text("self", scene[2])  
+            print del_from_bag("stuff", item)
+            self.user_input(current_space)  
 
 ### When no attack is rolled            
     def user_input(self, current_space):
@@ -216,6 +219,8 @@ class Game(object):
         ###Check actions list [action[current_space, command], other_action[current_space, command]]
         if subkey == "open bag":
             self.bag(current_space)
+        elif subkey == "gather":
+            add_to_bag("self", current_space)    
         else:
             print "not here"
 
@@ -227,7 +232,7 @@ class Game(object):
 
 
 	    
-current_space = 28
+current_space = 34
 
 go = Game(current_space)
-go.memory_nymph(current_space)
+go.poison_encounter(current_space)
