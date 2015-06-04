@@ -3,9 +3,10 @@ from sys import exit
 from tile_desc import scene
 from format_incoming import format_text
 from input_parsing import *
-from maps import graph, foe_map, tile_loc, gather_map
+from maps import graph, foe_map, tile_loc, gather_map, weapon_efficacy_map
 from scenes import *
 from bag import *
+from hp import *
 
 
 
@@ -34,7 +35,11 @@ class Game(object):
         elif x != y and current_space in poison_list:
             self.user_input(current_space)      
         elif x == y and 3 == current_space or 14 == current_space:
-            #Tile Change
+            print "    A fog descended upon the land. It thickened like a soup. All "
+            print "around, the landscape vanished from view. A peculiar wind stirred, "
+            print "it blew in every direction at once. Suddenly a strong gust lifted "
+            print "you up, carried you off and set you down somewhere entirely different. "
+            print "The fog cleared. "
             current_space = random.randint(1, 36)
             self.scene(current_space)    
         elif current_space == 22 or current_space == 24:
@@ -57,8 +62,9 @@ class Game(object):
         for key, value in Hit_Points.items():
             Hit_Points["Hero"] = new
             if new <= 0:
-                print "    Your last breath comes quickly. Your daughter flashes before your eyes. "
-                "She reaches out to you. You die, leaving her trapped forever."
+                print "    "
+                print "    Your last breath cames quickly. Your daughter flashed before your eyes. "
+                print "She reached out to you. You died and left her trapped forever."
                 exit(1)
         return new
  
@@ -74,30 +80,74 @@ class Game(object):
 
     def defense_input(self, current_space, foe):
         #CHECK FOR WEAPON BONUS, AUTO USE WEAPON/ INSTRUCTIONS FOR USE
-        user = raw_input("> ")    
-    
-        if 'hit' in user:
-            f_change = hero_strength[0]
-            update_line = "    Your foes health is now %s." % self.foe_health_change(current_space, foe, f_change)
-            return update_line
-        elif foe == "Tree_Disease" or foe == "Spewer" and "drink" in user:
-            if "poison_cure" in bag_contents[2]:
-                qt = bag_contents[2].count("poison_cure")
+        print foe
+        user = raw_input("> ")
+        ###Check input and weapon availability, obtain damage total
+        if "throw" in user and "obsidian disk" in bag_contents[1]:
+            weapon = "obsidian disk"
+            attack = sum(hero_strength + bag_description["obsidian disk"].keys())
+            message = "You throw an obsidian disk at your opponent."
+        elif "thrust" in user and "polearm" in bag_contents[1]:
+            weapon = "polearm"
+            attack = sum(hero_strength + bag_description["polearm"].keys())
+            message = "You thrust your polearm at your opponent."
+        elif "stab" in user and "dagger" in bag_contents[1]:
+            weapon = "dagger"
+            attack = sum(hero_strength + bag_description["dagger"].keys())
+            message = "You stab your opponent."
+        elif "hit" in user:
+            attack = hero_strength 
+            message = "You hit your opponent with your bare fist." 
+        else:
+            message = "It appears that you do not have that weapon available." 
+                
+
+    def weapon_check(self, weapon, foe):            
+        ###Check weapons efficacy, total deductions
+        if weapon in weapon_efficacy_map:
+            val = 0
+            for subkey in weapon_efficacy_map[weapon]:
+                val += 1
+                if foe in subkey:
+                    total = subkey[foe] + attack
+                    print "Your attack total is %r" % total
+                elif foe not in subkey and val == len(weapon_efficacy_map[weapon])/2:
+                    print "This weapon is useless against your opponent."  
+
+        print message                     
+   
+
+
+          
+                
+
+            
+          
+        #for keys in weapon_efficacy_map:
+        #    print foe
+        #if 'hit' in user:
+        #    f_change = hero_strength[0]
+        #    update_line = "    Your foes health is now %s." % self.foe_health_change(current_space, foe, f_change)
+        #    return update_line
+        #elif foe == "Tree_Disease" or foe == "Spewer" and "drink" in user:
+        #    if "poison_cure" in bag_contents[2]:
+        #        qt = bag_contents[2].count("poison_cure")
+        #twiggins/ swarm - hit, dagger,        
 
                 
 
-        if 'scream' in user:
-            return "scream"
-        else:
-            not_found = "    You're not even sure of what you were trying to do as you floundered to save your skin." 
-            return not_found   
+        #if 'scream' in user:
+        #    return "scream"
+        #else:
+        #    not_found = "    You're not even sure of what you were trying to do as you floundered to save your skin." 
+        #    return not_found   
 
     def attack_engine(self, current_space):
         val = 0 
         s_group = encounter[current_space] 
         scene_group = s_group[1:len(s_group)]
         scene = random.choice(scene_group) 
-        current_scene = scene[1] 
+        #current_scene = scene[1] 
         foe = foe_map[current_space]
         lucky = "    Luck favors you and the %s attack misses completely." % foe    
         ###While hero is alive, while foe is alive, if first time in, if subsequent times in.
@@ -109,7 +159,7 @@ class Game(object):
                 current_scene = scene[1]
 
                 if val == 0:
-                    incoming = s_group[0][1]
+                    incoming = s_group[0][0]
                     print format_text('stuff', incoming)
                 
                     if roll != 1:
@@ -125,13 +175,13 @@ class Game(object):
                         print lucky, self.defense_input(current_space, foe)
                         val = 1
                     elif roll != 1:
-                        h_change = scene[0][0]
+                        h_change = scene[0]
                         print format_text('stuff', current_scene), "Your health is now %s." % self.hero_health_change(h_change), self.defense_input(current_space, foe)
                         val = 1
 
 
             print "    Your foe perishes at your feet. At surviving, you are victorious."
-            self.scene(current_space)
+            self.user_input(current_space)
             exit(1)
 
         print "    With your last breath you scream \"Arturia!\" then you breath no more."
@@ -152,7 +202,7 @@ class Game(object):
                     current_scene = encounter[current_space][current_dict[key]]
                     print format_text('self', current_scene)
 
-        self.scene(current_space)
+        self.user_input(current_space)
 
     def poison_encounter(self, current_space):
         scene_set = encounter[current_space]
@@ -232,7 +282,7 @@ class Game(object):
 
 
 	    
-current_space = 34
+current_space = 26
 
 go = Game(current_space)
-go.poison_encounter(current_space)
+go.defense_input(current_space, "Spewer")
