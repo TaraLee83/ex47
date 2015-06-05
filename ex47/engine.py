@@ -78,30 +78,6 @@ class Game(object):
         foe_group = random.choice(foe)
         return foe_group          
 
-    def defense_input(self, current_space, foe):
-        #CHECK FOR WEAPON BONUS, AUTO USE WEAPON/ INSTRUCTIONS FOR USE
-        print foe
-        user = raw_input("> ")
-        ###Check input and weapon availability, obtain damage total
-        if "throw" in user and "obsidian disk" in bag_contents[1]:
-            weapon = "obsidian disk"
-            attack = sum(hero_strength + bag_description["obsidian disk"].keys())
-            message = "You throw an obsidian disk at your opponent."
-        elif "thrust" in user and "polearm" in bag_contents[1]:
-            weapon = "polearm"
-            attack = sum(hero_strength + bag_description["polearm"].keys())
-            message = "You thrust your polearm at your opponent."
-        elif "stab" in user and "dagger" in bag_contents[1]:
-            weapon = "dagger"
-            attack = sum(hero_strength + bag_description["dagger"].keys())
-            message = "You stab your opponent."
-        elif "hit" in user:
-            attack = hero_strength 
-            message = "You hit your opponent with your bare fist." 
-        else:
-            message = "It appears that you do not have that weapon available." 
-                
-
     def weapon_check(self, weapon, foe):            
         ###Check weapons efficacy, total deductions
         if weapon in weapon_efficacy_map:
@@ -109,38 +85,43 @@ class Game(object):
             for subkey in weapon_efficacy_map[weapon]:
                 val += 1
                 if foe in subkey:
-                    total = subkey[foe] + attack
-                    print "Your attack total is %r" % total
-                elif foe not in subkey and val == len(weapon_efficacy_map[weapon])/2:
-                    print "This weapon is useless against your opponent."  
+                    return True
+                elif foe not in subkey and val == len(weapon_efficacy_map[weapon]):
+                    return False  
 
-        print message                     
-   
+    def attack_totalling(self, weapon, foe):
+        return weapon_efficacy_map[weapon][foe] + bag_description[weapon].keys()[0]  
 
+    def defense_input(self, current_space, foe):
+        #CHECK FOR WEAPON BONUS, AUTO USE WEAPON/ INSTRUCTIONS FOR USE
+        user = raw_input("> ")
+        ###Check input and weapon availability, obtain damage total
+        if "throw" in user and "obsidian disk" in bag_contents[1]:
+            weapon = "obsidian disk"
+        elif "thrust" in user and "polearm" in bag_contents[1]:
+            weapon = "polearm"
+        elif "stab" in user and "dagger" in bag_contents[1]:
+            weapon = "dagger"
+        elif "hit" in user:
+            new_total = Hit_Points[foe] - 5
+            Hit_Points[foe] = (Hit_Points[foe] - 5)
+            return "    You punch your foe. Your foes health is now %r." % new_total
+        else:
+            weapon = 0
 
-          
-                
+        return self.defense_input_return(user, weapon, foe)    
 
-            
-          
-        #for keys in weapon_efficacy_map:
-        #    print foe
-        #if 'hit' in user:
-        #    f_change = hero_strength[0]
-        #    update_line = "    Your foes health is now %s." % self.foe_health_change(current_space, foe, f_change)
-        #    return update_line
-        #elif foe == "Tree_Disease" or foe == "Spewer" and "drink" in user:
-        #    if "poison_cure" in bag_contents[2]:
-        #        qt = bag_contents[2].count("poison_cure")
-        #twiggins/ swarm - hit, dagger,        
+    def defense_input_return(self, user, weapon, foe):            
+        if weapon == 0:  
+            return "    You flounder and lose ground."  
+        elif weapon != 0:
+            if self.weapon_check(weapon, foe) == True:
+                new_total = Hit_Points[foe] + self.attack_totalling(weapon, foe)
+                Hit_Points[foe] = new_total
+                return "    You %s your %s. Your foes health is now %r." % (user, weapon, new_total)
 
-                
-
-        #if 'scream' in user:
-        #    return "scream"
-        #else:
-        #    not_found = "    You're not even sure of what you were trying to do as you floundered to save your skin." 
-        #    return not_found   
+            elif self.weapon_check(weapon, foe) == False:
+                return "    This weapon is useless against your foe."          
 
     def attack_engine(self, current_space):
         val = 0 
@@ -181,8 +162,8 @@ class Game(object):
 
 
             print "    Your foe perishes at your feet. At surviving, you are victorious."
-            self.user_input(current_space)
-            exit(1)
+            self.scene(current_space)
+            break
 
         print "    With your last breath you scream \"Arturia!\" then you breath no more."
         exit(1)     
@@ -282,7 +263,7 @@ class Game(object):
 
 
 	    
-current_space = 26
+current_space = 4
 
 go = Game(current_space)
-go.defense_input(current_space, "Spewer")
+go.scene(current_space)
