@@ -19,25 +19,9 @@ from hp import *
 ###get input string, copy all keys found within to list. If only a main trigger word, i.e., sell
 ###was input, request more information. If two appropriate keys were entered funnel to matching
 ###function.
-words = "Something to write home about."
-keys = {"Something": 0, "home": 0}
-listed = words.split()
 
-onward = []
-
-
-def check_it(self):
-    for key in keys:
-        if key in listed:
-            onward.append(key)
-        else:
-            pass
-    print onward
-
-def count_keys(self):
-    pass
-
-
+###a is either buy, sell or trade
+###b is any item
 
 def passive_encounter(self, current_space):
     current_scenes = encounter[current_space]
@@ -66,13 +50,14 @@ def passive_encounter(self, current_space):
                     print "What would you like to %r ?" % a
                 elif len(sub_key_list) != 0:
                     b = sub_key_list
-                    print a, b
+                    buy_sell_trade('self', a, b)
         elif len(sub_key_list) != 0:
             print "What would you like to do with your %r ?" % sub_key_list
             b = sub_key_list.pop()
 
     print format_text('self', current_scenes[1])
 
+######################Parse input#########################################
 
 def pull_text_keys(self, current_space, u_i):
     current_dict = encounter_directory[current_space]
@@ -128,6 +113,24 @@ def pull_sub_keys(self, current_space, u_i):
     else:
         return sub_key_list
 
+
+################Run Functionality################################        
+
+def buy_sell_trade(self, a, b):
+    print b
+    a = var_index('self', a)
+    for key in item_map:
+        if key in b:
+            print item_map[key][a]
+    
+
+def var_index(self, a):
+    if "buy" in a:
+        a = 1
+    elif "sell" in a:
+        a = 2
+    
+    return a
 
 test = passive_encounter('self', 36)
 
