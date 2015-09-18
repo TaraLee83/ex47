@@ -8,7 +8,7 @@ Memory_Nymphs_Inp, Merchant_Inp, Sorrow_Lake_Inp, The_Beginning)
 from maps import actions_map, graph, foe_map, item_map, tile_loc, weapon_efficacy_map
 from merchant import sell, merchant_func
 from sorrow_lake import sorrow_lake_2
-from scenes import (The_Beginning_Scenes, Red_Dragon_Scenes, Green_Dragon_Scenes, Gold_Dragon_Scenes, Scorpian_Scenes,
+from scenes import (encounter, The_Beginning_Scenes, Red_Dragon_Scenes, Green_Dragon_Scenes, Gold_Dragon_Scenes, Scorpian_Scenes,
 Spewer_Scenes, The_Sorrow_Lake_Scenes, The_Sorrow_Island_Scenes, Tree_Disease_Scenes, Twiggins_Scenes, 
 Twiggins_Swarm_Scenes, Blacksmith_Scenes, Herbalist_Scenes, Desert_Scholar_Scenes, Meadow_Mystic_Scenes,
 Memory_Nymphs_Scenes, Merchant_Scenes, Tile_Change_Scene, White_Dragon_Scenes, Winner)
@@ -30,22 +30,24 @@ def passive_encounter(self, current_space):
     print format_text('self', intro_scene)
     val = 0
     a, b = 0, 0
-
+    text = 0
+    action = 0
+    #Check dictionary for request to exit encounter.
     while val != 1:
         u_i = raw_input("> ")
         key_list = pull_action_keys('self', current_space, u_i)
         sub_key_list = pull_sub_keys('self', current_space, u_i)
-        text_key_list = pull_text_keys('self', current_space, u_i)
-
-        if len(text_key_list) != 0:
-            if current_dict[a] == 1:
-                    val = 1
-            else:
-                print text_key_list
+        text = check_for_dialogue('self', current_space, u_i)
+        ###Need to print
+        if len(text) != 0:
+            print text
+            #if current_dict[text] == 1:
+            #        val = 1
+            #else:
+            #    print "hello"
         elif len(key_list) != 0:
             for action in key_list:
                 a = action
-                print a
                 if len(sub_key_list) == 0:
                     print "What would you like to %r ?" % a
                 elif len(sub_key_list) != 0:
@@ -59,7 +61,7 @@ def passive_encounter(self, current_space):
 
 ######################Parse input#########################################
 
-def pull_text_keys(self, current_space, u_i):
+def check_for_dialogue(self, current_space, u_i):
     current_dict = encounter_directory[current_space]
     current_scenes = encounter[current_space]
     text = []
@@ -114,14 +116,27 @@ def pull_sub_keys(self, current_space, u_i):
         return sub_key_list
 
 
-################Run Functionality################################        
+################Run Functionality################################ 
+###a = value of item
+###b = item name
+###c = value change of item       
 
 def buy_sell_trade(self, a, b):
-    print b
     a = var_index('self', a)
     for key in item_map:
         if key in b:
-            print item_map[key][a]
+            price = item_map[key][a]
+            n_t = price + bag_dict["Gold"]
+            if n_t <= 0:
+                message = "You don't have enough gold to purchase this item."
+            else:
+                n_t = bag_dict["Gold"]  
+                message = "You now have %r gold and %r %r." % (n_t, ) 
+                if 'buy' in key:
+                    c = 1
+                elif 'sell' in key: 
+                    c = -1
+                    
     
 
 def var_index(self, a):
